@@ -1,0 +1,726 @@
+{
+  "name": "Hybrid MAS AI Master's work",
+  "nodes": [
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=ЗАПИТ КОРИСТУВАЧА: {{ $node[\"Edit Fields\"].json.query }}\n---\nОСТАННЯ КРИТИКА: {{ $if($node[\"AI Agent Critic\"].isExecuted, $node[\"AI Agent Critic\"].json.output, \"Це перший запуск, критичних зауважень немає.\") }}\n\n⚠️ ІНСТРУКЦІЯ З ПОКРОКОВОГО ЗБОРУ ДАНИХ (ОБОВ'ЯЗКОВО):\nДля побудови аналізу ти МАЄШ послідовно використати два інструменти:\n1. Виклич інструмент Qdrant Vector Store1, щоб отримати методологію та дані клієнтів з локальної бази знань.\n2. Виклич інструмент SerpAPI, передавши в параметр `query` тему головного запиту користувача англійською мовою (наприклад, {\"query\": \"ecommerce pricing trends 2026\"}), щоб знайти актуальні лінки та факти. НІКОЛИ не передавай пусту строку в SerpAPI.\n3. Якщо в полі \"ОСТАННЯ КРИТИКА\" є зауваження — повністю перероби свій попередній звіт, виправивши всі вказані помилки.",
+        "options": {
+          "systemMessage": "=Ти — професійний АНАЛІТИК мультиагентної системи підтримки прийняття рішень (СППР). Твій стиль: об'єктивний, академічний, спираєшся виключно на факти.\n\nТВОЯ МЕТА: Побудувати фундаментальну аналітичну базу для запиту користувача, послідовно використовуючи доступні інструменти.\n\nПРАВИЛА РОБОТИ З ІНСТРУМЕНТАМИ:\n- Ти зобов'язаний використовувати Qdrant Vector Store1 для збору внутрішньої інформації (метрики клієнтів або методологія).\n- Ти зобов'язаний використовувати SerpAPI для збору зовнішніх трендів e-commerce на 2025-2026 роки.\n- Твій звіт повинен містити реальні URL-посилання, знайдені через SerpAPI (якщо запит загальний).\n\nFEW-SHOT EXAMPLES (ПРИКЛАДИ ПОВЕДІНКИ):\n\n[EXAMPLE 1 — ТОЧКОВИЙ ЗАПИТ ПО КЛІЄНТУ]\nUser: Які показники RFM у CustomerNo: 18121?\nContext from Qdrant: {\"content\": \"CustomerNo: 18121, Recency: 150, Frequency: 2, Monetary: 5301.88, Cluster: 3\"}\nYour Output: \n1. Теоретичне обґрунтування: Метод ідентифікації індивідуальних профілів на основі векторних просторів сховищ даних.\n2. Аналіз актуальних трендів 2025-2026: Для точкових запитів по конкретних ID зовнішній пошук використовується як додатковий контекст ринку e-commerce.\n3. Декомпозиція рішення та аналіз доцільності: Об'єкт CustomerNo: 18121 успішно знайдено в базі Qdrant. Метрики: Recency = 150, Frequency = 2, Monetary = 5301.88. Об'єкт належить до Кластера 3.\n4. Фундаментальний висновок: Клієнт демонструє високий рівень давності покупок, що є математичним маркером приналежності до сегмента відтоку.\n\n[EXAMPLE 2 — ЗАГАЛЬНИЙ ЗАПИТ ПО ДИПЛОМУ / ТРЕНДАХ]\nUser: Який фактор має найбільший вплив на формування виручки за результатами SHAP-аналізу?\nYour Output:\n1. Теоретичне обґрунтування: Використання методів ШІ (SHAP значень) для інтерпретації моделей машинного навчання (XAI).\n2. Аналіз актуальних трендів 2025-2026: Згідно з останніми дослідженнями ринку, e-commerce системи переходить на предиктивну аналітику повторних продажів (джерело: https://example.com/trends2026).\n3. Декомпозиція рішення та аналіз доцільності: Згідно з локальною базою знань, ключовим драйвером формування виручки є показник Frequency (частота транзакцій), який має довгий позитивний \"хвіст\" у зоні SHAP.\n4. Фундаментальний висновок: Частота транзакцій є домінуючим фактором, що науково обґрунтовує пріоритетність утримання клієнтів (Retention).\n\nСТРУКТУРА ЗВІТУ (СУВОРЕ ДОТРИМАННЯ):\n1. Теоретичне обґрунтування.\n2. Аналіз актуальних трендів 2025-2026 (з посиланнями на джерела).\n3. Декомпозиція рішення та аналіз доцільності.\n4. Фундаментальний висновок.",
+          "returnIntermediateSteps": true
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "position": [
+        416,
+        0
+      ],
+      "id": "01e4cd5a-ed9d-4cca-8f59-b8240e6e3007",
+      "name": "AI Agent Analyst",
+      "retryOnFail": false,
+      "notesInFlow": false
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=ОСЬ СТРАТЕГІЯ ВІД АНАЛІТИКА: \n{{ $node[\"AI Agent Analyst\"].json.output }}\n\n⚠️ ІНСТРУКЦІЯ ДЛЯ ПЕРЕВІРКИ:\n1. Виклич інструмент Qdrant Vector Store1, щоб дістати офіційну методологію та порівняти її з тим, що написав Аналітик.\n2. Знайди критичні помилки, слабкі місця або логічні розбіжності у звіті Аналітика.\n3. Якщо план містить помилки — детально розпиши, що саме виправити. Категорично заборонено писати слово ЗАТВЕРДЖЕНО, якщо є зауваження.\n4. Якщо план повністю відповідає методології Qdrant і виправляє минулі зауваження — ОБОВ'ЯЗКОВО напиши в самому кінці слово: ЗАТВЕРДЖЕНО.",
+        "options": {
+          "systemMessage": "=Ти — суворий, але конструктивний КРИТИК мультиагентної системи. Твій стиль: скептичний, прискіпливий до деталей, математичної точності та технічної реалізації.\n\nТВОЯ МЕТА: Довести аналітичний звіт до ідеалу за допомогою жорсткого перехресного аудиту з базою знань.\n\nПРАВИЛА ОЦІНКИ:\n- Для валідації звіту ти завжди використовуєш інструмент Qdrant Vector Store1, щоб звірятися з еталонною методометрикою.\n- Не пиши 'ЗАТВЕРДЖЕНО', поки не переконаєшся, що Аналітик знайшов реальні факти в базі або в інтернеті й не вигадав відсутність даних.\n- Якщо це вже 3-тє коло дебатів — припиняй чіплятися до дрібниць та пиши 'ЗАТВЕРДЖЕНО', якщо кістяк логіки вірний.\n\nFEW-SHOT EXAMPLES (ПРИКЛАДИ ПОВЕДІНКИ):\n\n[EXAMPLE 1 — ВИЯВЛЕНО ГАЛЮЦИНАЦІЮ АБО ПОМИЛКУ]\nAnalyst Output: Об'єкт 18121 відсутній у базі даних, тому пропонується змінити методологію...\nYour Output: План містить помилку. Згідно з валідацією через Qdrant Vector Store1, CustomerNo: 18121 існує в базі і має чіткі показники (Monetary: 5301.88, Cluster: 3). Аналітику необхідно негайно припинити генерацію мета-дебатів, зчитати реальний payload точки та вивести точні цифри клієнта. НЕ ЗАТВЕРДЖЕНО.\n\n[EXAMPLE 2 — ІДЕАЛЬНИЙ ЗВІТ / УСПІШНЕ ВИПРАВЛЕННЯ]\nAnalyst Output: Клієнт 18121 знайдений. Метрики: Recency=150, Frequency=2, Monetary=5301.88. Належить до Кластера 3 (Churn)...\nYour Output: Звіт Аналітика повністю відповідає еталонній структурі даних та методології сегментації, завантаженої у векторне сховище Qdrant. Помилки усунуто, факти верифіковано. ЗАТВЕРДЖЕНО."
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "position": [
+        736,
+        0
+      ],
+      "id": "3181978d-c42d-46d6-be31-d45658dfb647",
+      "name": "AI Agent Critic"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=ОСЬ ІСТОРІЯ ДЕБАТІВ МІЖ АНАЛІТИКОМ ТА КРИТИКОМ:\n{{ $node[\"AI Agent Critic\"].json.output }}\n\nТВОЄ ЗАВДАННЯ:\n1. Проаналізуй фінальний консенсус між агентами.\n2. Сформуй підсумковий, професійний Action Plan для e-commerce.\n3. Обов'язково виділи, які саме ризики, на яких наполягав Критик, були враховані.\n4. Підготуй текст так, щоб його можна було одразу вставляти в наукову роботу.",
+        "options": {
+          "systemMessage": "=Ти — МЕНЕДЖЕР, фінальна інтелектуальна ланка СППР. Твій стиль: прагматичний, рішучий, орієнтований на чіткий бізнес- або академічний результат.\n\nТВОЄ ЗАВДАННЯ: Синтезувати позиції Аналітика та Критика. Ти зобов'язаний повністю прибрати з тексту системні технічні фрази та вивести користувачу чисту, структуровану відповідь українською мовою.\n\nFEW-SHOT EXAMPLES (ПРИКЛАДИ ФОРМАТУ ВИВОДУ):\n\n[EXAMPLE 1 — ВІДПОВІДЬ НА ТОЧКОВИЙ ЗАПИТ (Customer No)]\nYour Output:\n### **Результати індивідуального аналізу клієнта**\nЗа результатами звернення до векторного сховища даних було успішно ідентифіковано профілі та метрики клієнта **CustomerNo: 18121**:\n*   **Recency (Давність транзакції):** 150 днів\n*   **Frequency (Частота покупок):** 2 рази\n*   **Monetary (Сумарна виручка):** 5301.88\n*   **AvgPrice (Середній чек за одиницю):** 12.16\n*   **Поточний сегмент:** Кластер 3 (Категорія CHURN / Відтік)\n\n### **Управлінські рішення та стратегія**\n*   **Діагностика стану:** Показник Recency (150 днів) вказує на тривалу бездіяльність. Висока середня ціна товару при низькій частоті підтверджує ситуативний або разовий характер споживання.\n*   **Сценарій підтримки прийняття рішень:** Замість масових маркетингових витрат рекомендується застосувати м'яку тригерну кампанію реактивації, надіслати NPS-опитування для виявлення цінового бар'єру або запропонувати цільові товари-комплементи.\n\n[EXAMPLE 2 — ВІДПОВІДЬ НА ЗАГАЛЬНИЙ АКАДЕМІЧНИЙ ЗАПИТ]\nYour Output:\n### **Резюме управлінського рішення**\nНа основі математично обґрунтованого SHAP-аналізу та верифікації моделей машинного навчання K-means визначено цільову структуру оптимізації маркетингових бюджетів електронної комерції.\n\n### **Покроковий Action Plan для впровадження в e-commerce контур**\n1. **Пріоритезація утримання за метрикою Frequency:** Оскільки частота транзакцій є головним позитивним драйвером формування виручки згідно з SHAP-моделлю, впровадити автоматизовану програму лояльності для стимулювання повторних замовлень.\n2. **Рання реактивація сегмента Churn:** Використовувати динамічний маркер Recency для фіксації критичних пауз споживання та запуску тригерних розсилок на етапі, коли силует клієнта ще не став межовим аномальним об'єктом.\n\nФОРМАТ РЕЗУЛЬТАТУ (СУВОРЕ ДОТРИМАННЯ):\nВикористовуй тільки стандартні заголовки (###), жирний шрифт та марковані списки Markdown. Заборонено загортати текст у моноширинні блоки pre/code, які створюють горизонтальний скролл!"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "position": [
+        1216,
+        0
+      ],
+      "id": "7fea5227-e3f7-42d2-9505-4a7b4109eb7b",
+      "name": "AI Agent Manager"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "0b98e8d5-dfe9-4cc3-900e-4b86855b0758",
+              "name": "query",
+              "value": "={{ $node[\"Webhook\"].json.body.chat_input }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        208,
+        0
+      ],
+      "id": "d3e6c657-d4cd-416b-bd31-d442f971ca4a",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "6234ab43-557f-414b-af90-e2e650e709cd",
+              "leftValue": "={{ $json.output }}",
+              "rightValue": "ЗАТВЕРДЖЕНО",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            },
+            {
+              "id": "c2c78bc7-9bad-45e7-af18-08d659136e72",
+              "leftValue": "={{ $itemIndex }}",
+              "rightValue": 2,
+              "operator": {
+                "type": "number",
+                "operation": "gte"
+              }
+            }
+          ],
+          "combinator": "or"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        1024,
+        0
+      ],
+      "id": "6d62519a-6f88-4f59-a2b7-c14e14b757b1",
+      "name": "If"
+    },
+    {
+      "parameters": {
+        "sessionIdType": "customKey",
+        "sessionKey": "=123456"
+      },
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        1312,
+        384
+      ],
+      "id": "57a33774-5f00-4c8b-8718-57919d27e0b5",
+      "name": "Simple Memory Manager"
+    },
+    {
+      "parameters": {
+        "sessionIdType": "customKey",
+        "sessionKey": "=123456"
+      },
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        832,
+        384
+      ],
+      "id": "f3e58255-27fc-40c4-b755-e5d341962a72",
+      "name": "Simple Memory Critic"
+    },
+    {
+      "parameters": {
+        "sessionIdType": "customKey",
+        "sessionKey": "=123456"
+      },
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        512,
+        384
+      ],
+      "id": "eb7d9162-be27-46bf-a4b4-049d44dcae5a",
+      "name": "Simple Memory Analyst"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "06e2b7e6-78b1-40be-9e39-1765b2c91968",
+              "name": "Результат_Аналізу",
+              "value": "={{ $node[\"AI Agent Manager\"].json.output }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1520,
+        0
+      ],
+      "id": "0bc5fa59-6862-4f56-88d3-051b0577eb67",
+      "name": "Edit Fields Final"
+    },
+    {
+      "parameters": {
+        "operation": "download",
+        "fileId": {
+          "__rl": true,
+          "value": "1SW7pQp8hNEOwawgYHEBEn_BeW8fA9ev0",
+          "mode": "id"
+        },
+        "options": {
+          "fileName": "ClientData"
+        }
+      },
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        2304,
+        544
+      ],
+      "id": "5b63c827-55e5-4756-b49b-75c2d156d1a3",
+      "name": "Download file ClientData",
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "YmJsFV3muhiSvYxd",
+          "name": "Google Drive account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "fromJson",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1.1,
+      "position": [
+        2528,
+        544
+      ],
+      "id": "bd540a11-a76b-4fbf-bc5b-37d78593e3c6",
+      "name": "Extract from File.json"
+    },
+    {
+      "parameters": {
+        "jsCode": "// 1. Беремо весь вхідний масив з ноду Extract from File.json\nconst rawData = $input.all()[0].json.data;\n\nif (!rawData || !Array.isArray(rawData)) {\n    return [{ json: { pageContent: \"Помилка: Масив даних відсутній або має невірний формат.\" } }];\n}\n\nlet outputDocuments = [];\n\n// 2. Проходимо циклом по кожному елементу (клієнти + SHAP/LIME аналітика в кінці)\nrawData.forEach((item, index) => {\n    let textParts = [];\n    \n    // 3. Динамічно збираємо ВСІ ключі та ВСІ значення (числа, рядки, об'єкти)\n    for (const [key, value] of Object.entries(item)) {\n        if (typeof value === 'object' && value !== null) {\n            // Якщо всередині складний об'єкт (наприклад, блоки SHAP), перетворюємо його на текст\n            textParts.push(`${key}: ${JSON.stringify(value)}`);\n        } else {\n            // Всі числа (Recency, Frequency, Monetary) та текст записуємо як є\n            textParts.push(`${key}: ${value}`);\n        }\n    }\n    \n    // 4. Склеюємо всі поля об'єкта в один суцільний рядок через кому\n    const completeText = textParts.join(', ');\n    \n    // 5. Формуємо правильний ітем, який n8n Vector Store з'їсть без залишку\n    outputDocuments.push({\n        json: {\n            pageContent: completeText,\n            metadata: {\n                source: \"blob\",\n                blobType: \"application/json\",\n                line: index + 1\n            }\n        }\n    });\n});\n\nreturn outputDocuments;"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2752,
+        544
+      ],
+      "id": "bb68b832-46ae-4343-8d46-0b36f86d31cc",
+      "name": "Code Segmentation"
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "56e49b70-57bc-4b36-b2ea-caae27b22cf4",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "24fb8878-d93e-4ce2-a6fb-48788e9d82a7",
+      "name": "Webhook",
+      "webhookId": "56e49b70-57bc-4b36-b2ea-caae27b22cf4"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.5,
+      "position": [
+        1712,
+        0
+      ],
+      "id": "b7f4f29c-70e9-48e1-b6db-7a167c6f5b6b",
+      "name": "Respond to Webhook"
+    },
+    {
+      "parameters": {
+        "mode": "insert",
+        "qdrantCollection": {
+          "__rl": true,
+          "value": "segmentation",
+          "mode": "list",
+          "cachedResultName": "segmentation"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.vectorStoreQdrant",
+      "typeVersion": 1.3,
+      "position": [
+        2928,
+        544
+      ],
+      "id": "e828e6ee-c33d-41ee-8602-ddc7d701bd2b",
+      "name": "Qdrant Vector Store",
+      "credentials": {
+        "qdrantApi": {
+          "id": "i1LYQ33hPqwBXOyc",
+          "name": "Qdrant account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "mode": "retrieve-as-tool",
+        "toolDescription": "Search tool for customer segmentation data, RFM metrics, and methodology",
+        "qdrantCollection": {
+          "__rl": true,
+          "value": "segmentation",
+          "mode": "list",
+          "cachedResultName": "segmentation"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.vectorStoreQdrant",
+      "typeVersion": 1.3,
+      "position": [
+        624,
+        528
+      ],
+      "id": "10f8cbf7-478f-4470-b11d-9d4f8421732a",
+      "name": "Qdrant Vector Store1",
+      "credentials": {
+        "qdrantApi": {
+          "id": "i1LYQ33hPqwBXOyc",
+          "name": "Qdrant account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": "nomic-embed-text:latest"
+      },
+      "type": "@n8n/n8n-nodes-langchain.embeddingsOllama",
+      "typeVersion": 1,
+      "position": [
+        624,
+        672
+      ],
+      "id": "de2d9594-2dc0-4b1b-807b-73885d3dd770",
+      "name": "Embeddings Ollama",
+      "credentials": {
+        "ollamaApi": {
+          "id": "zClos5GFGft1euNX",
+          "name": "Ollama account 9"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.documentDefaultDataLoader",
+      "typeVersion": 1.1,
+      "position": [
+        3120,
+        768
+      ],
+      "id": "2cbdaa2a-807f-4db7-bfa7-0069c548a819",
+      "name": "Default Data Loader"
+    },
+    {
+      "parameters": {
+        "toolDescription": "Use this tool to search Google for ecommerce trends 2026.",
+        "url": "https://serpapi.com/search",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "q",
+              "value": "={{ $json.query }}"
+            },
+            {
+              "name": "api_key",
+              "value": "7f98b40d7727a95468e5da4c27d22b27261cfce0b0b990d7f6a065684ee52fe5"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequestTool",
+      "typeVersion": 4.4,
+      "position": [
+        1024,
+        528
+      ],
+      "id": "e93f2feb-1507-4730-8979-5181b46fb282",
+      "name": "Google_Search"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "qwen3.6-27b",
+          "mode": "list",
+          "cachedResultName": "qwen3.6-27b"
+        },
+        "builtInTools": {},
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.3,
+      "position": [
+        416,
+        256
+      ],
+      "id": "329c5255-5801-41a1-8a94-17eb6a4abb08",
+      "name": "OpenAI Chat Model",
+      "credentials": {
+        "openAiApi": {
+          "id": "hIX4LgVpD7eoFUId",
+          "name": "OpenAI account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "qwen3.6-27b",
+          "mode": "list",
+          "cachedResultName": "qwen3.6-27b"
+        },
+        "builtInTools": {},
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.3,
+      "position": [
+        736,
+        256
+      ],
+      "id": "0ff990ed-ec3b-47d8-9f8e-8729cdc3baab",
+      "name": "OpenAI Chat Model1",
+      "credentials": {
+        "openAiApi": {
+          "id": "hIX4LgVpD7eoFUId",
+          "name": "OpenAI account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "qwen3.6-27b",
+          "mode": "list",
+          "cachedResultName": "qwen3.6-27b"
+        },
+        "builtInTools": {},
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.3,
+      "position": [
+        1216,
+        240
+      ],
+      "id": "f44382d9-ec61-4ded-a5e3-3ca23dc6167b",
+      "name": "OpenAI Chat Model2",
+      "credentials": {
+        "openAiApi": {
+          "id": "hIX4LgVpD7eoFUId",
+          "name": "OpenAI account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": "nomic-embed-text",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        2928,
+        752
+      ],
+      "id": "20c63e7a-436b-4a9d-9ebd-761723969d29",
+      "name": "Embeddings OpenAI",
+      "credentials": {
+        "openAiApi": {
+          "id": "hIX4LgVpD7eoFUId",
+          "name": "OpenAI account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "AI Agent Critic": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent Manager": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields Final",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "AI Agent Analyst",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [],
+        [
+          {
+            "node": "AI Agent Analyst",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simple Memory Manager": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent Manager",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simple Memory Critic": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent Critic",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simple Memory Analyst": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent Analyst",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields Final": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Download file ClientData": {
+      "main": [
+        [
+          {
+            "node": "Extract from File.json",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract from File.json": {
+      "main": [
+        [
+          {
+            "node": "Code Segmentation",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code Segmentation": {
+      "main": [
+        [
+          {
+            "node": "Qdrant Vector Store",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Qdrant Vector Store1": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent Analyst",
+            "type": "ai_tool",
+            "index": 0
+          },
+          {
+            "node": "AI Agent Critic",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Embeddings Ollama": {
+      "ai_embedding": [
+        [
+          {
+            "node": "Qdrant Vector Store1",
+            "type": "ai_embedding",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Default Data Loader": {
+      "ai_document": [
+        [
+          {
+            "node": "Qdrant Vector Store",
+            "type": "ai_document",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google_Search": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent Analyst",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent Analyst",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent Critic",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model2": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent Manager",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Embeddings OpenAI": {
+      "ai_embedding": [
+        [
+          {
+            "node": "Qdrant Vector Store",
+            "type": "ai_embedding",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "ed0bb7c5-1bc0-40b5-b1eb-dbcbdf2a8a45",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "76d8be952a06b9531e852a9a534913bbbdab3666cda8b3ec200b555ca7dc2b0b"
+  },
+  "nodeGroups": [],
+  "id": "ijE9VZsJITooLg6D",
+  "tags": []
+}
