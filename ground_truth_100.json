@@ -1,0 +1,2649 @@
+[
+    {
+        "question_id": 1,
+        "category": "Block 1: Customer Profile",
+        "question_text": "Show country of origin, purchased items, price elasticity of demand for these items, and cluster membership for customer 13069.",
+        "sql_query": "SELECT c.CustomerNo, c.Cluster, p.Country, p.ProductName, p.Price, p.Quantity, p.Elasticity FROM clients c LEFT JOIN purchases p ON c.CustomerNo = p.CustomerNo WHERE c.CustomerNo = 13069 LIMIT 10;",
+        "ground_truth_output": [
+            {
+                "CustomerNo": 13069,
+                "Cluster": 2,
+                "Country": "United Kingdom",
+                "ProductName": "Christmas Star Wish List Chalkboard",
+                "Price": 10.65,
+                "Quantity": 36,
+                "Elasticity": 1.5149
+            },
+            {
+                "CustomerNo": 13069,
+                "Cluster": 2,
+                "Country": "United Kingdom",
+                "ProductName": "Storage Tin Vintage Leaf",
+                "Price": 11.53,
+                "Quantity": 12,
+                "Elasticity": 1.0163
+            },
+            {
+                "CustomerNo": 13069,
+                "Cluster": 2,
+                "Country": "United Kingdom",
+                "ProductName": "Tree T-Light Holder Willie Winkie",
+                "Price": 10.65,
+                "Quantity": 12,
+                "Elasticity": 1.0505
+            },
+            {
+                "CustomerNo": 13069,
+                "Cluster": 2,
+                "Country": "United Kingdom",
+                "ProductName": "Set Of 4 Knick Knack Tins Poppies",
+                "Price": 11.94,
+                "Quantity": 6,
+                "Elasticity": 0.7225
+            },
+            {
+                "CustomerNo": 13069,
+                "Cluster": 2,
+                "Country": "United Kingdom",
+                "ProductName": "Bag 500g Swirly Marbles",
+                "Price": 10.65,
+                "Quantity": 24,
+                "Elasticity": 1.3435
+            },
+            {
+                "CustomerNo": 13069,
+                "Cluster": 2,
+                "Country": "United Kingdom",
+                "ProductName": "Joy Wooden Block Letters",
+                "Price": 11.53,
+                "Quantity": 18,
+                "Elasticity": 1.1822
+            },
+            {
+                "CustomerNo": 13069,
+                "Cluster": 2,
+                "Country": "United Kingdom",
+                "ProductName": "Peace Wooden Block Letters",
+                "Price": 12.25,
+                "Quantity": 12,
+                "Elasticity": 0.9918
+            },
+            {
+                "CustomerNo": 13069,
+                "Cluster": 2,
+                "Country": "United Kingdom",
+                "ProductName": "T-Light Holder Hanging Lace",
+                "Price": 10.65,
+                "Quantity": 12,
+                "Elasticity": 1.0505
+            },
+            {
+                "CustomerNo": 13069,
+                "Cluster": 2,
+                "Country": "United Kingdom",
+                "ProductName": "T-Light Holder White Lace",
+                "Price": 10.55,
+                "Quantity": 24,
+                "Elasticity": 1.3488
+            },
+            {
+                "CustomerNo": 13069,
+                "Cluster": 2,
+                "Country": "United Kingdom",
+                "ProductName": "Toy Tidy Spaceboy",
+                "Price": 11.06,
+                "Quantity": 20,
+                "Elasticity": 1.2465
+            }
+        ]
+    },
+    {
+        "question_id": 2,
+        "category": "Block 1: Customer Profile",
+        "question_text": "Show country of origin, purchased items, price elasticity of demand for these items, and cluster membership for customer 12415.",
+        "sql_query": "SELECT c.CustomerNo, c.Cluster, p.Country, p.ProductName, p.Price, p.Quantity, p.Elasticity FROM clients c LEFT JOIN purchases p ON c.CustomerNo = p.CustomerNo WHERE c.CustomerNo = 12415 LIMIT 10;",
+        "ground_truth_output": [
+            {
+                "CustomerNo": 12415,
+                "Cluster": 1,
+                "Country": "Australia",
+                "ProductName": "Spaceboy Lunch Box",
+                "Price": 11.94,
+                "Quantity": 64,
+                "Elasticity": 1.677
+            },
+            {
+                "CustomerNo": 12415,
+                "Cluster": 1,
+                "Country": "Australia",
+                "ProductName": "Dolly Girl Lunch Box",
+                "Price": 11.94,
+                "Quantity": 64,
+                "Elasticity": 1.677
+            },
+            {
+                "CustomerNo": 12415,
+                "Cluster": 1,
+                "Country": "Australia",
+                "ProductName": "Circus Parade Lunch Box",
+                "Price": 11.94,
+                "Quantity": 64,
+                "Elasticity": 1.677
+            },
+            {
+                "CustomerNo": 12415,
+                "Cluster": 1,
+                "Country": "Australia",
+                "ProductName": "Bundle Of 3 Alphabet Exercise Books",
+                "Price": 11.74,
+                "Quantity": 48,
+                "Elasticity": 1.5717
+            },
+            {
+                "CustomerNo": 12415,
+                "Cluster": 1,
+                "Country": "Australia",
+                "ProductName": "Round Snack Boxes Set Of4 Woodland",
+                "Price": 12.86,
+                "Quantity": 96,
+                "Elasticity": 1.7871
+            },
+            {
+                "CustomerNo": 12415,
+                "Cluster": 1,
+                "Country": "Australia",
+                "ProductName": "Vintage Billboard Love/Hate Mug",
+                "Price": 11.34,
+                "Quantity": 36,
+                "Elasticity": 1.4757
+            },
+            {
+                "CustomerNo": 12415,
+                "Cluster": 1,
+                "Country": "Australia",
+                "ProductName": "Rabbit Night Light",
+                "Price": 12.08,
+                "Quantity": 960,
+                "Elasticity": 2.7561
+            },
+            {
+                "CustomerNo": 12415,
+                "Cluster": 1,
+                "Country": "Australia",
+                "ProductName": "Fairy Tale Cottage Night Light",
+                "Price": 11.94,
+                "Quantity": 96,
+                "Elasticity": 1.8405
+            },
+            {
+                "CustomerNo": 12415,
+                "Cluster": 1,
+                "Country": "Australia",
+                "ProductName": "Red Toadstool Led Night Light",
+                "Price": 11.74,
+                "Quantity": 144,
+                "Elasticity": 2.0178
+            },
+            {
+                "CustomerNo": 12415,
+                "Cluster": 1,
+                "Country": "Australia",
+                "ProductName": "Woodland Party Bag + Sticker Set",
+                "Price": 11.74,
+                "Quantity": 48,
+                "Elasticity": 1.5717
+            }
+        ]
+    },
+    {
+        "question_id": 3,
+        "category": "Block 1: Customer Profile",
+        "question_text": "Show country of origin, purchased items, price elasticity of demand for these items, and cluster membership for customer 12347.",
+        "sql_query": "SELECT c.CustomerNo, c.Cluster, p.Country, p.ProductName, p.Price, p.Quantity, p.Elasticity FROM clients c LEFT JOIN purchases p ON c.CustomerNo = p.CustomerNo WHERE c.CustomerNo = 12347 LIMIT 10;",
+        "ground_truth_output": [
+            {
+                "CustomerNo": 12347,
+                "Cluster": 0,
+                "Country": "Iceland",
+                "ProductName": "Classic Chrome Bicycle Bell",
+                "Price": 7.24,
+                "Quantity": 12,
+                "Elasticity": 1.2552
+            },
+            {
+                "CustomerNo": 12347,
+                "Cluster": 0,
+                "Country": "Iceland",
+                "ProductName": "Bicycle Puncture Repair Kit",
+                "Price": 7.24,
+                "Quantity": 6,
+                "Elasticity": 0.9051
+            },
+            {
+                "CustomerNo": 12347,
+                "Cluster": 0,
+                "Country": "Iceland",
+                "ProductName": "Boom Box Speaker Boys",
+                "Price": 6.39,
+                "Quantity": 24,
+                "Elasticity": 1.7135
+            },
+            {
+                "CustomerNo": 12347,
+                "Cluster": 0,
+                "Country": "Iceland",
+                "ProductName": "Pink New Baroquecandlestick Candle",
+                "Price": 6.19,
+                "Quantity": 24,
+                "Elasticity": 1.7434
+            },
+            {
+                "CustomerNo": 12347,
+                "Cluster": 0,
+                "Country": "Iceland",
+                "ProductName": "Red Toadstool Led Night Light",
+                "Price": 6.19,
+                "Quantity": 24,
+                "Elasticity": 1.7434
+            },
+            {
+                "CustomerNo": 12347,
+                "Cluster": 0,
+                "Country": "Iceland",
+                "ProductName": "Rabbit Night Light",
+                "Price": 6.19,
+                "Quantity": 24,
+                "Elasticity": 1.7434
+            },
+            {
+                "CustomerNo": 12347,
+                "Cluster": 0,
+                "Country": "Iceland",
+                "ProductName": "Woodland Charlotte Bag",
+                "Price": 6.19,
+                "Quantity": 10,
+                "Elasticity": 1.2631
+            },
+            {
+                "CustomerNo": 12347,
+                "Cluster": 0,
+                "Country": "Iceland",
+                "ProductName": "Pink Goose Feather Tree 60cm",
+                "Price": 6.19,
+                "Quantity": 12,
+                "Elasticity": 1.3631
+            },
+            {
+                "CustomerNo": 12347,
+                "Cluster": 0,
+                "Country": "Iceland",
+                "ProductName": "Christmas Table Silver Candle Spike",
+                "Price": 6.19,
+                "Quantity": 16,
+                "Elasticity": 1.5209
+            },
+            {
+                "CustomerNo": 12347,
+                "Cluster": 0,
+                "Country": "Iceland",
+                "ProductName": "Mini Playing Cards Spaceboy",
+                "Price": 6.19,
+                "Quantity": 20,
+                "Elasticity": 1.6434
+            }
+        ]
+    },
+    {
+        "question_id": 4,
+        "category": "Block 1: Customer Profile",
+        "question_text": "Show country of origin, purchased items, price elasticity of demand for these items, and cluster membership for customer 12621.",
+        "sql_query": "SELECT c.CustomerNo, c.Cluster, p.Country, p.ProductName, p.Price, p.Quantity, p.Elasticity FROM clients c LEFT JOIN purchases p ON c.CustomerNo = p.CustomerNo WHERE c.CustomerNo = 12621 LIMIT 10;",
+        "ground_truth_output": [
+            {
+                "CustomerNo": 12621,
+                "Cluster": 2,
+                "Country": "Germany",
+                "ProductName": "Set Of 6 Ribbons Party",
+                "Price": 6.19,
+                "Quantity": 12,
+                "Elasticity": 1.3631
+            },
+            {
+                "CustomerNo": 12621,
+                "Cluster": 2,
+                "Country": "Germany",
+                "ProductName": "Lets Go Shopping Cotton Tote Bag",
+                "Price": 6.19,
+                "Quantity": 6,
+                "Elasticity": 0.9829
+            },
+            {
+                "CustomerNo": 12621,
+                "Cluster": 2,
+                "Country": "Germany",
+                "ProductName": "Woodland Charlotte Bag",
+                "Price": 6.19,
+                "Quantity": 10,
+                "Elasticity": 1.2631
+            },
+            {
+                "CustomerNo": 12621,
+                "Cluster": 2,
+                "Country": "Germany",
+                "ProductName": "Woodland Mini Backpack",
+                "Price": 6.19,
+                "Quantity": 4,
+                "Elasticity": 0.7605
+            },
+            {
+                "CustomerNo": 12621,
+                "Cluster": 2,
+                "Country": "Germany",
+                "ProductName": "Elephant Birthday Card",
+                "Price": 6.19,
+                "Quantity": 12,
+                "Elasticity": 1.3631
+            },
+            {
+                "CustomerNo": 12621,
+                "Cluster": 2,
+                "Country": "Germany",
+                "ProductName": "Gin & Tonic Diet Greeting Card",
+                "Price": 6.19,
+                "Quantity": 12,
+                "Elasticity": 1.3631
+            },
+            {
+                "CustomerNo": 12621,
+                "Cluster": 2,
+                "Country": "Germany",
+                "ProductName": "Wrap 50'S Christmas",
+                "Price": 6.19,
+                "Quantity": 25,
+                "Elasticity": 1.7658
+            },
+            {
+                "CustomerNo": 12621,
+                "Cluster": 2,
+                "Country": "Germany",
+                "ProductName": "Wrap Red Apples",
+                "Price": 6.19,
+                "Quantity": 25,
+                "Elasticity": 1.7658
+            },
+            {
+                "CustomerNo": 12621,
+                "Cluster": 2,
+                "Country": "Germany",
+                "ProductName": "Wrap Wedding Day",
+                "Price": 6.19,
+                "Quantity": 25,
+                "Elasticity": 1.7658
+            },
+            {
+                "CustomerNo": 12621,
+                "Cluster": 2,
+                "Country": "Germany",
+                "ProductName": "Wrap Poppies Design",
+                "Price": 6.19,
+                "Quantity": 25,
+                "Elasticity": 1.7658
+            }
+        ]
+    },
+    {
+        "question_id": 5,
+        "category": "Block 1: Customer Profile",
+        "question_text": "Show country of origin, purchased items, price elasticity of demand for these items, and cluster membership for customer 12748.",
+        "sql_query": "SELECT c.CustomerNo, c.Cluster, p.Country, p.ProductName, p.Price, p.Quantity, p.Elasticity FROM clients c LEFT JOIN purchases p ON c.CustomerNo = p.CustomerNo WHERE c.CustomerNo = 12748 LIMIT 10;",
+        "ground_truth_output": [
+            {
+                "CustomerNo": 12748,
+                "Cluster": 1,
+                "Country": "United Kingdom",
+                "ProductName": "Ivory Wicker Heart Small",
+                "Price": 7.24,
+                "Quantity": 4,
+                "Elasticity": 0.7003
+            },
+            {
+                "CustomerNo": 12748,
+                "Cluster": 1,
+                "Country": "United Kingdom",
+                "ProductName": "Vintage Snap Cards",
+                "Price": 7.24,
+                "Quantity": 1,
+                "Elasticity": 0.0
+            },
+            {
+                "CustomerNo": 12748,
+                "Cluster": 1,
+                "Country": "United Kingdom",
+                "ProductName": "75 Green Petit Four Cases",
+                "Price": 7.24,
+                "Quantity": 2,
+                "Elasticity": 0.3501
+            },
+            {
+                "CustomerNo": 12748,
+                "Cluster": 1,
+                "Country": "United Kingdom",
+                "ProductName": "12 Message Cards With Envelopes",
+                "Price": 7.24,
+                "Quantity": 1,
+                "Elasticity": 0.0
+            },
+            {
+                "CustomerNo": 12748,
+                "Cluster": 1,
+                "Country": "United Kingdom",
+                "ProductName": "Christmas Tree Star Decoration",
+                "Price": 7.24,
+                "Quantity": 2,
+                "Elasticity": 0.3501
+            },
+            {
+                "CustomerNo": 12748,
+                "Cluster": 1,
+                "Country": "United Kingdom",
+                "ProductName": "Christmas Hanging Tree With Bell",
+                "Price": 7.24,
+                "Quantity": 2,
+                "Elasticity": 0.3501
+            },
+            {
+                "CustomerNo": 12748,
+                "Cluster": 1,
+                "Country": "United Kingdom",
+                "ProductName": "12 Pencils Small Tube Skull",
+                "Price": 7.24,
+                "Quantity": 1,
+                "Elasticity": 0.0
+            },
+            {
+                "CustomerNo": 12748,
+                "Cluster": 1,
+                "Country": "United Kingdom",
+                "ProductName": "Egg Frying Pan Red",
+                "Price": 7.24,
+                "Quantity": 1,
+                "Elasticity": 0.0
+            },
+            {
+                "CustomerNo": 12748,
+                "Cluster": 1,
+                "Country": "United Kingdom",
+                "ProductName": "Traditional Christmas Ribbons",
+                "Price": 7.24,
+                "Quantity": 1,
+                "Elasticity": 0.0
+            },
+            {
+                "CustomerNo": 12748,
+                "Cluster": 1,
+                "Country": "United Kingdom",
+                "ProductName": "Feltcraft Girl Amelie Kit",
+                "Price": 7.24,
+                "Quantity": 1,
+                "Elasticity": 0.0
+            }
+        ]
+    },
+    {
+        "question_id": 6,
+        "category": "Block 1: Customer Profile",
+        "question_text": "Show country of origin, purchased items, price elasticity of demand for these items, and cluster membership for customer 22222.",
+        "sql_query": "SELECT c.CustomerNo, c.Cluster, p.Country, p.ProductName, p.Price, p.Quantity, p.Elasticity FROM clients c LEFT JOIN purchases p ON c.CustomerNo = p.CustomerNo WHERE c.CustomerNo = 22222 LIMIT 10;",
+        "ground_truth_output": []
+    },
+    {
+        "question_id": 7,
+        "category": "Block 1: Customer Profile",
+        "question_text": "Show country of origin, purchased items, price elasticity of demand for these items, and cluster membership for customer 33333.",
+        "sql_query": "SELECT c.CustomerNo, c.Cluster, p.Country, p.ProductName, p.Price, p.Quantity, p.Elasticity FROM clients c LEFT JOIN purchases p ON c.CustomerNo = p.CustomerNo WHERE c.CustomerNo = 33333 LIMIT 10;",
+        "ground_truth_output": []
+    },
+    {
+        "question_id": 8,
+        "category": "Block 1: Customer Profile",
+        "question_text": "Show country of origin, purchased items, price elasticity of demand for these items, and cluster membership for customer 44444.",
+        "sql_query": "SELECT c.CustomerNo, c.Cluster, p.Country, p.ProductName, p.Price, p.Quantity, p.Elasticity FROM clients c LEFT JOIN purchases p ON c.CustomerNo = p.CustomerNo WHERE c.CustomerNo = 44444 LIMIT 10;",
+        "ground_truth_output": []
+    },
+    {
+        "question_id": 9,
+        "category": "Block 1: Customer Profile",
+        "question_text": "Show country of origin, purchased items, price elasticity of demand for these items, and cluster membership for customer 55555.",
+        "sql_query": "SELECT c.CustomerNo, c.Cluster, p.Country, p.ProductName, p.Price, p.Quantity, p.Elasticity FROM clients c LEFT JOIN purchases p ON c.CustomerNo = p.CustomerNo WHERE c.CustomerNo = 55555 LIMIT 10;",
+        "ground_truth_output": []
+    },
+    {
+        "question_id": 10,
+        "category": "Block 1: Customer Profile",
+        "question_text": "Show country of origin, purchased items, price elasticity of demand for these items, and cluster membership for customer 66666.",
+        "sql_query": "SELECT c.CustomerNo, c.Cluster, p.Country, p.ProductName, p.Price, p.Quantity, p.Elasticity FROM clients c LEFT JOIN purchases p ON c.CustomerNo = p.CustomerNo WHERE c.CustomerNo = 66666 LIMIT 10;",
+        "ground_truth_output": []
+    },
+    {
+        "question_id": 11,
+        "category": "Block 2: RFM & Elasticity",
+        "question_text": "What is the total monetary spend, transaction frequency, and price elasticity of items bought by client 17490?",
+        "sql_query": "SELECT c.CustomerNo, c.Monetary, c.Frequency, AVG(p.Elasticity) as AvgPriceElasticity FROM clients c LEFT JOIN purchases p ON c.CustomerNo = p.CustomerNo WHERE c.CustomerNo = 17490 GROUP BY c.CustomerNo;",
+        "ground_truth_output": [
+            {
+                "CustomerNo": 17490,
+                "Monetary": 13538.07,
+                "Frequency": 7,
+                "AvgPriceElasticity": 0.8147105882352941
+            }
+        ]
+    },
+    {
+        "question_id": 12,
+        "category": "Block 2: RFM & Elasticity",
+        "question_text": "What is the total monetary spend, transaction frequency, and price elasticity of items bought by client 12008?",
+        "sql_query": "SELECT c.CustomerNo, c.Monetary, c.Frequency, AVG(p.Elasticity) as AvgPriceElasticity FROM clients c LEFT JOIN purchases p ON c.CustomerNo = p.CustomerNo WHERE c.CustomerNo = 12008 GROUP BY c.CustomerNo;",
+        "ground_truth_output": [
+            {
+                "CustomerNo": 12008,
+                "Monetary": 5689.57,
+                "Frequency": 1,
+                "AvgPriceElasticity": 0.13398768472906405
+            }
+        ]
+    },
+    {
+        "question_id": 13,
+        "category": "Block 2: RFM & Elasticity",
+        "question_text": "What is the total monetary spend, transaction frequency, and price elasticity of items bought by client 12026?",
+        "sql_query": "SELECT c.CustomerNo, c.Monetary, c.Frequency, AVG(p.Elasticity) as AvgPriceElasticity FROM clients c LEFT JOIN purchases p ON c.CustomerNo = p.CustomerNo WHERE c.CustomerNo = 12026 GROUP BY c.CustomerNo;",
+        "ground_truth_output": [
+            {
+                "CustomerNo": 12026,
+                "Monetary": 20486.32,
+                "Frequency": 1,
+                "AvgPriceElasticity": 0.3569273838630807
+            }
+        ]
+    },
+    {
+        "question_id": 14,
+        "category": "Block 2: RFM & Elasticity",
+        "question_text": "What is the total monetary spend, transaction frequency, and price elasticity of items bought by client 12071?",
+        "sql_query": "SELECT c.CustomerNo, c.Monetary, c.Frequency, AVG(p.Elasticity) as AvgPriceElasticity FROM clients c LEFT JOIN purchases p ON c.CustomerNo = p.CustomerNo WHERE c.CustomerNo = 12071 GROUP BY c.CustomerNo;",
+        "ground_truth_output": [
+            {
+                "CustomerNo": 12071,
+                "Monetary": 23215.26,
+                "Frequency": 1,
+                "AvgPriceElasticity": 0.2180993836671803
+            }
+        ]
+    },
+    {
+        "question_id": 15,
+        "category": "Block 2: RFM & Elasticity",
+        "question_text": "What is the total monetary spend, transaction frequency, and price elasticity of items bought by client 12237?",
+        "sql_query": "SELECT c.CustomerNo, c.Monetary, c.Frequency, AVG(p.Elasticity) as AvgPriceElasticity FROM clients c LEFT JOIN purchases p ON c.CustomerNo = p.CustomerNo WHERE c.CustomerNo = 12237 GROUP BY c.CustomerNo;",
+        "ground_truth_output": [
+            {
+                "CustomerNo": 12237,
+                "Monetary": 22960.43,
+                "Frequency": 1,
+                "AvgPriceElasticity": 0.21890604026845636
+            }
+        ]
+    },
+    {
+        "question_id": 16,
+        "category": "Block 2: RFM & Elasticity",
+        "question_text": "What is the total monetary spend, transaction frequency, and price elasticity of items bought by client 23245?",
+        "sql_query": "SELECT c.CustomerNo, c.Monetary, c.Frequency, AVG(p.Elasticity) as AvgPriceElasticity FROM clients c LEFT JOIN purchases p ON c.CustomerNo = p.CustomerNo WHERE c.CustomerNo = 23245 GROUP BY c.CustomerNo;",
+        "ground_truth_output": []
+    },
+    {
+        "question_id": 17,
+        "category": "Block 2: RFM & Elasticity",
+        "question_text": "What is the total monetary spend, transaction frequency, and price elasticity of items bought by client 23248?",
+        "sql_query": "SELECT c.CustomerNo, c.Monetary, c.Frequency, AVG(p.Elasticity) as AvgPriceElasticity FROM clients c LEFT JOIN purchases p ON c.CustomerNo = p.CustomerNo WHERE c.CustomerNo = 23248 GROUP BY c.CustomerNo;",
+        "ground_truth_output": []
+    },
+    {
+        "question_id": 18,
+        "category": "Block 2: RFM & Elasticity",
+        "question_text": "What is the total monetary spend, transaction frequency, and price elasticity of items bought by client 88888?",
+        "sql_query": "SELECT c.CustomerNo, c.Monetary, c.Frequency, AVG(p.Elasticity) as AvgPriceElasticity FROM clients c LEFT JOIN purchases p ON c.CustomerNo = p.CustomerNo WHERE c.CustomerNo = 88888 GROUP BY c.CustomerNo;",
+        "ground_truth_output": []
+    },
+    {
+        "question_id": 19,
+        "category": "Block 2: RFM & Elasticity",
+        "question_text": "What is the total monetary spend, transaction frequency, and price elasticity of items bought by client 50505?",
+        "sql_query": "SELECT c.CustomerNo, c.Monetary, c.Frequency, AVG(p.Elasticity) as AvgPriceElasticity FROM clients c LEFT JOIN purchases p ON c.CustomerNo = p.CustomerNo WHERE c.CustomerNo = 50505 GROUP BY c.CustomerNo;",
+        "ground_truth_output": []
+    },
+    {
+        "question_id": 20,
+        "category": "Block 2: RFM & Elasticity",
+        "question_text": "What is the total monetary spend, transaction frequency, and price elasticity of items bought by client 90909?",
+        "sql_query": "SELECT c.CustomerNo, c.Monetary, c.Frequency, AVG(p.Elasticity) as AvgPriceElasticity FROM clients c LEFT JOIN purchases p ON c.CustomerNo = p.CustomerNo WHERE c.CustomerNo = 90909 GROUP BY c.CustomerNo;",
+        "ground_truth_output": []
+    },
+    {
+        "question_id": 21,
+        "category": "Block 3: Cluster & Activity",
+        "question_text": "To which cluster does customer 15804 belong, and what are their primary purchasing activity indicators (recency and average price)?",
+        "sql_query": "SELECT CustomerNo, Cluster, Recency, AvgPrice FROM clients WHERE CustomerNo = 15804;",
+        "ground_truth_output": [
+            {
+                "CustomerNo": 15804,
+                "Cluster": 2,
+                "Recency": 1,
+                "AvgPrice": 15.004351145
+            }
+        ]
+    },
+    {
+        "question_id": 22,
+        "category": "Block 3: Cluster & Activity",
+        "question_text": "To which cluster does customer 12006 belong, and what are their primary purchasing activity indicators (recency and average price)?",
+        "sql_query": "SELECT CustomerNo, Cluster, Recency, AvgPrice FROM clients WHERE CustomerNo = 12006;",
+        "ground_truth_output": [
+            {
+                "CustomerNo": 12006,
+                "Cluster": 3,
+                "Recency": 219,
+                "AvgPrice": 12.38
+            }
+        ]
+    },
+    {
+        "question_id": 23,
+        "category": "Block 3: Cluster & Activity",
+        "question_text": "To which cluster does customer 12031 belong, and what are their primary purchasing activity indicators (recency and average price)?",
+        "sql_query": "SELECT CustomerNo, Cluster, Recency, AvgPrice FROM clients WHERE CustomerNo = 12031;",
+        "ground_truth_output": [
+            {
+                "CustomerNo": 12031,
+                "Cluster": 0,
+                "Recency": 71,
+                "AvgPrice": 7.0742857143
+            }
+        ]
+    },
+    {
+        "question_id": 24,
+        "category": "Block 3: Cluster & Activity",
+        "question_text": "To which cluster does customer 12042 belong, and what are their primary purchasing activity indicators (recency and average price)?",
+        "sql_query": "SELECT CustomerNo, Cluster, Recency, AvgPrice FROM clients WHERE CustomerNo = 12042;",
+        "ground_truth_output": [
+            {
+                "CustomerNo": 12042,
+                "Cluster": 3,
+                "Recency": 265,
+                "AvgPrice": 14.9904035874
+            }
+        ]
+    },
+    {
+        "question_id": 25,
+        "category": "Block 3: Cluster & Activity",
+        "question_text": "To which cluster does customer 12067 belong, and what are their primary purchasing activity indicators (recency and average price)?",
+        "sql_query": "SELECT CustomerNo, Cluster, Recency, AvgPrice FROM clients WHERE CustomerNo = 12067;",
+        "ground_truth_output": [
+            {
+                "CustomerNo": 12067,
+                "Cluster": 0,
+                "Recency": 18,
+                "AvgPrice": 13.7332164948
+            }
+        ]
+    },
+    {
+        "question_id": 26,
+        "category": "Block 3: Cluster & Activity",
+        "question_text": "To which cluster does customer 44444 belong, and what are their primary purchasing activity indicators (recency and average price)?",
+        "sql_query": "SELECT CustomerNo, Cluster, Recency, AvgPrice FROM clients WHERE CustomerNo = 44444;",
+        "ground_truth_output": []
+    },
+    {
+        "question_id": 27,
+        "category": "Block 3: Cluster & Activity",
+        "question_text": "To which cluster does customer 88888 belong, and what are their primary purchasing activity indicators (recency and average price)?",
+        "sql_query": "SELECT CustomerNo, Cluster, Recency, AvgPrice FROM clients WHERE CustomerNo = 88888;",
+        "ground_truth_output": []
+    },
+    {
+        "question_id": 28,
+        "category": "Block 3: Cluster & Activity",
+        "question_text": "To which cluster does customer 99999 belong, and what are their primary purchasing activity indicators (recency and average price)?",
+        "sql_query": "SELECT CustomerNo, Cluster, Recency, AvgPrice FROM clients WHERE CustomerNo = 99999;",
+        "ground_truth_output": []
+    },
+    {
+        "question_id": 29,
+        "category": "Block 3: Cluster & Activity",
+        "question_text": "To which cluster does customer 77777 belong, and what are their primary purchasing activity indicators (recency and average price)?",
+        "sql_query": "SELECT CustomerNo, Cluster, Recency, AvgPrice FROM clients WHERE CustomerNo = 77777;",
+        "ground_truth_output": []
+    },
+    {
+        "question_id": 30,
+        "category": "Block 3: Cluster & Activity",
+        "question_text": "To which cluster does customer 55555 belong, and what are their primary purchasing activity indicators (recency and average price)?",
+        "sql_query": "SELECT CustomerNo, Cluster, Recency, AvgPrice FROM clients WHERE CustomerNo = 55555;",
+        "ground_truth_output": []
+    },
+    {
+        "question_id": 31,
+        "category": "Block 4: Inelastic Demand",
+        "question_text": "Identify products with inelastic demand ($E_d < 1$) purchased by customer 12359, and explain what measures can be taken to increase store revenue from customer 12359.",
+        "sql_query": "SELECT ProductName, Price, Quantity, Elasticity FROM purchases WHERE CustomerNo = 12359 AND Elasticity < 1 AND Elasticity > 0 GROUP BY ProductName ORDER BY Elasticity ASC LIMIT 10;",
+        "ground_truth_output": [
+            {
+                "ProductName": "Rustic Seventeen Drawer Sideboard",
+                "Price": 158.88,
+                "Quantity": 2,
+                "Elasticity": 0.1368
+            },
+            {
+                "ProductName": "Love Seat Antique White Metal",
+                "Price": 97.37,
+                "Quantity": 2,
+                "Elasticity": 0.1514
+            },
+            {
+                "ProductName": "Set/4 White Retro Storage Cubes",
+                "Price": 51.2,
+                "Quantity": 2,
+                "Elasticity": 0.1761
+            },
+            {
+                "ProductName": "Bread Bin Diner Style Ivory",
+                "Price": 27.62,
+                "Quantity": 2,
+                "Elasticity": 0.2089
+            },
+            {
+                "ProductName": "Bread Bin Diner Style Mint",
+                "Price": 27.62,
+                "Quantity": 2,
+                "Elasticity": 0.2089
+            },
+            {
+                "ProductName": "Bread Bin Diner Style Red",
+                "Price": 27.62,
+                "Quantity": 2,
+                "Elasticity": 0.2089
+            },
+            {
+                "ProductName": "3 Tier Cake Tin Green And Cream",
+                "Price": 25.57,
+                "Quantity": 2,
+                "Elasticity": 0.2138
+            },
+            {
+                "ProductName": "3 Tier Cake Tin Red And Cream",
+                "Price": 25.57,
+                "Quantity": 2,
+                "Elasticity": 0.2138
+            },
+            {
+                "ProductName": "Red Retrospot Cake Stand",
+                "Price": 21.47,
+                "Quantity": 2,
+                "Elasticity": 0.226
+            },
+            {
+                "ProductName": "Foot Stool Home Sweet Home",
+                "Price": 20.45,
+                "Quantity": 2,
+                "Elasticity": 0.2297
+            }
+        ]
+    },
+    {
+        "question_id": 32,
+        "category": "Block 4: Inelastic Demand",
+        "question_text": "Identify products with inelastic demand ($E_d < 1$) purchased by customer 13069, and explain what measures can be taken to increase store revenue from customer 13069.",
+        "sql_query": "SELECT ProductName, Price, Quantity, Elasticity FROM purchases WHERE CustomerNo = 13069 AND Elasticity < 1 AND Elasticity > 0 GROUP BY ProductName ORDER BY Elasticity ASC LIMIT 10;",
+        "ground_truth_output": [
+            {
+                "ProductName": "Tea Time Party Bunting",
+                "Price": 15.32,
+                "Quantity": 2,
+                "Elasticity": 0.254
+            },
+            {
+                "ProductName": "Heart Of Wicker Large",
+                "Price": 13.27,
+                "Quantity": 2,
+                "Elasticity": 0.2681
+            },
+            {
+                "ProductName": "Large White Heart Of Wicker",
+                "Price": 13.27,
+                "Quantity": 2,
+                "Elasticity": 0.2681
+            },
+            {
+                "ProductName": "Red Retrospot Picnic Bag",
+                "Price": 13.27,
+                "Quantity": 2,
+                "Elasticity": 0.2681
+            },
+            {
+                "ProductName": "Round Snack Boxes Set Of 4 Fruits",
+                "Price": 13.27,
+                "Quantity": 2,
+                "Elasticity": 0.2681
+            },
+            {
+                "ProductName": "Round Snack Boxes Set Of 4 Skulls",
+                "Price": 13.27,
+                "Quantity": 2,
+                "Elasticity": 0.2681
+            },
+            {
+                "ProductName": "Round Snack Boxes Set Of4 Woodland",
+                "Price": 13.27,
+                "Quantity": 2,
+                "Elasticity": 0.2681
+            },
+            {
+                "ProductName": "Set Of 6 T-Lights Santa",
+                "Price": 13.27,
+                "Quantity": 2,
+                "Elasticity": 0.2681
+            },
+            {
+                "ProductName": "Funky Washing Up Gloves Assorted",
+                "Price": 12.4,
+                "Quantity": 2,
+                "Elasticity": 0.2753
+            },
+            {
+                "ProductName": "Hand Warmer Babushka Design",
+                "Price": 12.4,
+                "Quantity": 2,
+                "Elasticity": 0.2753
+            }
+        ]
+    },
+    {
+        "question_id": 33,
+        "category": "Block 4: Inelastic Demand",
+        "question_text": "Identify products with inelastic demand ($E_d < 1$) purchased by customer 17490, and explain what measures can be taken to increase store revenue from customer 17490.",
+        "sql_query": "SELECT ProductName, Price, Quantity, Elasticity FROM purchases WHERE CustomerNo = 17490 AND Elasticity < 1 AND Elasticity > 0 GROUP BY ProductName ORDER BY Elasticity ASC LIMIT 10;",
+        "ground_truth_output": [
+            {
+                "ProductName": "Retrospot Lamp",
+                "Price": 20.45,
+                "Quantity": 2,
+                "Elasticity": 0.2297
+            },
+            {
+                "ProductName": "Black Kitchen Scales",
+                "Price": 18.96,
+                "Quantity": 2,
+                "Elasticity": 0.2356
+            },
+            {
+                "ProductName": "Christmas Lights 10 Santas",
+                "Price": 18.96,
+                "Quantity": 2,
+                "Elasticity": 0.2356
+            },
+            {
+                "ProductName": "Ivory Kitchen Scales",
+                "Price": 18.96,
+                "Quantity": 2,
+                "Elasticity": 0.2356
+            },
+            {
+                "ProductName": "Mint Kitchen Scales",
+                "Price": 18.96,
+                "Quantity": 2,
+                "Elasticity": 0.2356
+            },
+            {
+                "ProductName": "Red Kitchen Scales",
+                "Price": 18.96,
+                "Quantity": 2,
+                "Elasticity": 0.2356
+            },
+            {
+                "ProductName": "Card Holder Love Bird Large",
+                "Price": 16.66,
+                "Quantity": 2,
+                "Elasticity": 0.2464
+            },
+            {
+                "ProductName": "Baking Set 9 Piece Retrospot",
+                "Price": 15.32,
+                "Quantity": 3,
+                "Elasticity": 0.4025
+            },
+            {
+                "ProductName": "Set Of 3 Regency Cake Tins",
+                "Price": 15.32,
+                "Quantity": 4,
+                "Elasticity": 0.508
+            },
+            {
+                "ProductName": "Enamel Measuring Jug Cream",
+                "Price": 14.61,
+                "Quantity": 4,
+                "Elasticity": 0.5169
+            }
+        ]
+    },
+    {
+        "question_id": 34,
+        "category": "Block 4: Inelastic Demand",
+        "question_text": "Identify products with inelastic demand ($E_d < 1$) purchased by customer 15804, and explain what measures can be taken to increase store revenue from customer 15804.",
+        "sql_query": "SELECT ProductName, Price, Quantity, Elasticity FROM purchases WHERE CustomerNo = 15804 AND Elasticity < 1 AND Elasticity > 0 GROUP BY ProductName ORDER BY Elasticity ASC LIMIT 10;",
+        "ground_truth_output": [
+            {
+                "ProductName": "Vintage Red Kitchen Cabinet",
+                "Price": 594.5,
+                "Quantity": 2,
+                "Elasticity": 0.1085
+            },
+            {
+                "ProductName": "Wooden Advent Calendar Cream",
+                "Price": 27.62,
+                "Quantity": 2,
+                "Elasticity": 0.2089
+            },
+            {
+                "ProductName": "Set Of 16 Vintage Pistachio Cutlery",
+                "Price": 23.32,
+                "Quantity": 2,
+                "Elasticity": 0.2201
+            },
+            {
+                "ProductName": "Stool Home Sweet Home",
+                "Price": 23.06,
+                "Quantity": 2,
+                "Elasticity": 0.2209
+            },
+            {
+                "ProductName": "Childs Breakfast Set Dolly Girl",
+                "Price": 20.45,
+                "Quantity": 2,
+                "Elasticity": 0.2297
+            },
+            {
+                "ProductName": "Childs Breakfast Set Spaceboy",
+                "Price": 20.45,
+                "Quantity": 2,
+                "Elasticity": 0.2297
+            },
+            {
+                "ProductName": "Foot Stool Home Sweet Home",
+                "Price": 20.45,
+                "Quantity": 2,
+                "Elasticity": 0.2297
+            },
+            {
+                "ProductName": "Key Cabinet Ma Campagne",
+                "Price": 20.45,
+                "Quantity": 2,
+                "Elasticity": 0.2297
+            },
+            {
+                "ProductName": "Pink Jewelled Mirror Trinket Tray",
+                "Price": 20.45,
+                "Quantity": 2,
+                "Elasticity": 0.2297
+            },
+            {
+                "ProductName": "Regency Teapot Roses",
+                "Price": 20.45,
+                "Quantity": 2,
+                "Elasticity": 0.2297
+            }
+        ]
+    },
+    {
+        "question_id": 35,
+        "category": "Block 4: Inelastic Demand",
+        "question_text": "Identify products with inelastic demand ($E_d < 1$) purchased by customer 12415, and explain what measures can be taken to increase store revenue from customer 12415.",
+        "sql_query": "SELECT ProductName, Price, Quantity, Elasticity FROM purchases WHERE CustomerNo = 12415 AND Elasticity < 1 AND Elasticity > 0 GROUP BY ProductName ORDER BY Elasticity ASC LIMIT 10;",
+        "ground_truth_output": [
+            {
+                "ProductName": "Recycled Acapulco Mat Red",
+                "Price": 18.71,
+                "Quantity": 2,
+                "Elasticity": 0.2366
+            },
+            {
+                "ProductName": "Set 40 Heart Shape Petit Four Cases",
+                "Price": 11.94,
+                "Quantity": 2,
+                "Elasticity": 0.2795
+            },
+            {
+                "ProductName": "Set Of 6 Tea Time Baking Cases",
+                "Price": 11.53,
+                "Quantity": 2,
+                "Elasticity": 0.2835
+            },
+            {
+                "ProductName": "Set Of 12 Fairy Cake Baking Cases",
+                "Price": 11.1,
+                "Quantity": 2,
+                "Elasticity": 0.288
+            },
+            {
+                "ProductName": "Set Of 12 Mini Loaf Baking Cases",
+                "Price": 11.1,
+                "Quantity": 2,
+                "Elasticity": 0.288
+            },
+            {
+                "ProductName": "Set Of 6 Snack Loaf Baking Cases",
+                "Price": 11.1,
+                "Quantity": 2,
+                "Elasticity": 0.288
+            },
+            {
+                "ProductName": "Red Retrospot Butter Dish",
+                "Price": 15.32,
+                "Quantity": 3,
+                "Elasticity": 0.4025
+            },
+            {
+                "ProductName": "Wall Art 70'S Alphabet",
+                "Price": 17.89,
+                "Quantity": 6,
+                "Elasticity": 0.6212
+            },
+            {
+                "ProductName": "Black/Blue Polkadot Umbrella",
+                "Price": 16.35,
+                "Quantity": 6,
+                "Elasticity": 0.6412
+            },
+            {
+                "ProductName": "Bread Bin Diner Style Mint",
+                "Price": 25.57,
+                "Quantity": 8,
+                "Elasticity": 0.6415
+            }
+        ]
+    },
+    {
+        "question_id": 36,
+        "category": "Block 4: Inelastic Demand",
+        "question_text": "Identify products with inelastic demand ($E_d < 1$) purchased by customer 60606, and explain what measures can be taken to increase store revenue from customer 60606.",
+        "sql_query": "SELECT ProductName, Price, Quantity, Elasticity FROM purchases WHERE CustomerNo = 60606 AND Elasticity < 1 AND Elasticity > 0 GROUP BY ProductName ORDER BY Elasticity ASC LIMIT 10;",
+        "ground_truth_output": []
+    },
+    {
+        "question_id": 37,
+        "category": "Block 4: Inelastic Demand",
+        "question_text": "Identify products with inelastic demand ($E_d < 1$) purchased by customer 45867, and explain what measures can be taken to increase store revenue from customer 45867.",
+        "sql_query": "SELECT ProductName, Price, Quantity, Elasticity FROM purchases WHERE CustomerNo = 45867 AND Elasticity < 1 AND Elasticity > 0 GROUP BY ProductName ORDER BY Elasticity ASC LIMIT 10;",
+        "ground_truth_output": []
+    },
+    {
+        "question_id": 38,
+        "category": "Block 4: Inelastic Demand",
+        "question_text": "Identify products with inelastic demand ($E_d < 1$) purchased by customer 95468, and explain what measures can be taken to increase store revenue from customer 95468.",
+        "sql_query": "SELECT ProductName, Price, Quantity, Elasticity FROM purchases WHERE CustomerNo = 95468 AND Elasticity < 1 AND Elasticity > 0 GROUP BY ProductName ORDER BY Elasticity ASC LIMIT 10;",
+        "ground_truth_output": []
+    },
+    {
+        "question_id": 39,
+        "category": "Block 4: Inelastic Demand",
+        "question_text": "Identify products with inelastic demand ($E_d < 1$) purchased by customer 36482, and explain what measures can be taken to increase store revenue from customer 36482.",
+        "sql_query": "SELECT ProductName, Price, Quantity, Elasticity FROM purchases WHERE CustomerNo = 36482 AND Elasticity < 1 AND Elasticity > 0 GROUP BY ProductName ORDER BY Elasticity ASC LIMIT 10;",
+        "ground_truth_output": []
+    },
+    {
+        "question_id": 40,
+        "category": "Block 4: Inelastic Demand",
+        "question_text": "Identify products with inelastic demand ($E_d < 1$) purchased by customer 90480, and explain what measures can be taken to increase store revenue from customer 90480.",
+        "sql_query": "SELECT ProductName, Price, Quantity, Elasticity FROM purchases WHERE CustomerNo = 90480 AND Elasticity < 1 AND Elasticity > 0 GROUP BY ProductName ORDER BY Elasticity ASC LIMIT 10;",
+        "ground_truth_output": []
+    },
+    {
+        "question_id": 41,
+        "category": "Block 5: Dynamic Pricing Plan",
+        "question_text": "Based on transaction history, what dynamic pricing strategy should be applied to client 16949 to maximize customer lifetime value?",
+        "sql_query": "SELECT c.CustomerNo, c.Cluster, c.Recency, c.Frequency, c.Monetary, AVG(p.Elasticity) as AvgElasticity FROM clients c LEFT JOIN purchases p ON c.CustomerNo = p.CustomerNo WHERE c.CustomerNo = 16949 GROUP BY c.CustomerNo;",
+        "ground_truth_output": [
+            {
+                "CustomerNo": 16949,
+                "Cluster": 0,
+                "Recency": 4,
+                "Frequency": 7,
+                "Monetary": 16665.45,
+                "AvgElasticity": 0.37012286821705426
+            }
+        ]
+    },
+    {
+        "question_id": 42,
+        "category": "Block 5: Dynamic Pricing Plan",
+        "question_text": "Based on transaction history, what dynamic pricing strategy should be applied to client 13069 to maximize customer lifetime value?",
+        "sql_query": "SELECT c.CustomerNo, c.Cluster, c.Recency, c.Frequency, c.Monetary, AVG(p.Elasticity) as AvgElasticity FROM clients c LEFT JOIN purchases p ON c.CustomerNo = p.CustomerNo WHERE c.CustomerNo = 13069 GROUP BY c.CustomerNo;",
+        "ground_truth_output": [
+            {
+                "CustomerNo": 13069,
+                "Cluster": 2,
+                "Recency": 1,
+                "Frequency": 24,
+                "Monetary": 63353.94,
+                "AvgElasticity": 0.6571187234042554
+            }
+        ]
+    },
+    {
+        "question_id": 43,
+        "category": "Block 5: Dynamic Pricing Plan",
+        "question_text": "Based on transaction history, what dynamic pricing strategy should be applied to client 17490 to maximize customer lifetime value?",
+        "sql_query": "SELECT c.CustomerNo, c.Cluster, c.Recency, c.Frequency, c.Monetary, AVG(p.Elasticity) as AvgElasticity FROM clients c LEFT JOIN purchases p ON c.CustomerNo = p.CustomerNo WHERE c.CustomerNo = 17490 GROUP BY c.CustomerNo;",
+        "ground_truth_output": [
+            {
+                "CustomerNo": 17490,
+                "Cluster": 0,
+                "Recency": 1,
+                "Frequency": 7,
+                "Monetary": 13538.07,
+                "AvgElasticity": 0.8147105882352941
+            }
+        ]
+    },
+    {
+        "question_id": 44,
+        "category": "Block 5: Dynamic Pricing Plan",
+        "question_text": "Based on transaction history, what dynamic pricing strategy should be applied to client 15804 to maximize customer lifetime value?",
+        "sql_query": "SELECT c.CustomerNo, c.Cluster, c.Recency, c.Frequency, c.Monetary, AVG(p.Elasticity) as AvgElasticity FROM clients c LEFT JOIN purchases p ON c.CustomerNo = p.CustomerNo WHERE c.CustomerNo = 15804 GROUP BY c.CustomerNo;",
+        "ground_truth_output": [
+            {
+                "CustomerNo": 15804,
+                "Cluster": 2,
+                "Recency": 1,
+                "Frequency": 13,
+                "Monetary": 29149.14,
+                "AvgElasticity": 0.7896663003663004
+            }
+        ]
+    },
+    {
+        "question_id": 45,
+        "category": "Block 5: Dynamic Pricing Plan",
+        "question_text": "Based on transaction history, what dynamic pricing strategy should be applied to client 12359 to maximize customer lifetime value?",
+        "sql_query": "SELECT c.CustomerNo, c.Cluster, c.Recency, c.Frequency, c.Monetary, AVG(p.Elasticity) as AvgElasticity FROM clients c LEFT JOIN purchases p ON c.CustomerNo = p.CustomerNo WHERE c.CustomerNo = 12359 GROUP BY c.CustomerNo;",
+        "ground_truth_output": [
+            {
+                "CustomerNo": 12359,
+                "Cluster": 0,
+                "Recency": 58,
+                "Frequency": 4,
+                "Monetary": 24503.01,
+                "AvgElasticity": 0.6120007874015747
+            }
+        ]
+    },
+    {
+        "question_id": 46,
+        "category": "Block 5: Dynamic Pricing Plan",
+        "question_text": "Based on transaction history, what dynamic pricing strategy should be applied to client 72691 to maximize customer lifetime value?",
+        "sql_query": "SELECT c.CustomerNo, c.Cluster, c.Recency, c.Frequency, c.Monetary, AVG(p.Elasticity) as AvgElasticity FROM clients c LEFT JOIN purchases p ON c.CustomerNo = p.CustomerNo WHERE c.CustomerNo = 72691 GROUP BY c.CustomerNo;",
+        "ground_truth_output": []
+    },
+    {
+        "question_id": 47,
+        "category": "Block 5: Dynamic Pricing Plan",
+        "question_text": "Based on transaction history, what dynamic pricing strategy should be applied to client 97239 to maximize customer lifetime value?",
+        "sql_query": "SELECT c.CustomerNo, c.Cluster, c.Recency, c.Frequency, c.Monetary, AVG(p.Elasticity) as AvgElasticity FROM clients c LEFT JOIN purchases p ON c.CustomerNo = p.CustomerNo WHERE c.CustomerNo = 97239 GROUP BY c.CustomerNo;",
+        "ground_truth_output": []
+    },
+    {
+        "question_id": 48,
+        "category": "Block 5: Dynamic Pricing Plan",
+        "question_text": "Based on transaction history, what dynamic pricing strategy should be applied to client 65380 to maximize customer lifetime value?",
+        "sql_query": "SELECT c.CustomerNo, c.Cluster, c.Recency, c.Frequency, c.Monetary, AVG(p.Elasticity) as AvgElasticity FROM clients c LEFT JOIN purchases p ON c.CustomerNo = p.CustomerNo WHERE c.CustomerNo = 65380 GROUP BY c.CustomerNo;",
+        "ground_truth_output": []
+    },
+    {
+        "question_id": 49,
+        "category": "Block 5: Dynamic Pricing Plan",
+        "question_text": "Based on transaction history, what dynamic pricing strategy should be applied to client 99364 to maximize customer lifetime value?",
+        "sql_query": "SELECT c.CustomerNo, c.Cluster, c.Recency, c.Frequency, c.Monetary, AVG(p.Elasticity) as AvgElasticity FROM clients c LEFT JOIN purchases p ON c.CustomerNo = p.CustomerNo WHERE c.CustomerNo = 99364 GROUP BY c.CustomerNo;",
+        "ground_truth_output": []
+    },
+    {
+        "question_id": 50,
+        "category": "Block 5: Dynamic Pricing Plan",
+        "question_text": "Based on transaction history, what dynamic pricing strategy should be applied to client 84390 to maximize customer lifetime value?",
+        "sql_query": "SELECT c.CustomerNo, c.Cluster, c.Recency, c.Frequency, c.Monetary, AVG(p.Elasticity) as AvgElasticity FROM clients c LEFT JOIN purchases p ON c.CustomerNo = p.CustomerNo WHERE c.CustomerNo = 84390 GROUP BY c.CustomerNo;",
+        "ground_truth_output": []
+    },
+    {
+        "question_id": 51,
+        "category": "Block 6: Elastic Goods Analysis",
+        "question_text": "Find top 5 products with elastic demand ($E_d > 1$) purchased by clients in Cluster 0 and suggest optimal pricing.",
+        "sql_query": "SELECT p.ProductName, AVG(p.Price) as AvgPrice, SUM(p.Quantity) as TotalQuantity, AVG(p.Elasticity) as Elasticity FROM purchases p JOIN clients c ON p.CustomerNo = c.CustomerNo WHERE c.Cluster = 0 AND p.Elasticity > 1 GROUP BY p.ProductName ORDER BY Elasticity DESC LIMIT 5;",
+        "ground_truth_output": [
+            {
+                "ProductName": "Sweetheart Bird House",
+                "AvgPrice": 6.19,
+                "TotalQuantity": 620,
+                "Elasticity": 3.5271
+            },
+            {
+                "ProductName": "Antique Heart Shelf Unit",
+                "AvgPrice": 6.19,
+                "TotalQuantity": 150,
+                "Elasticity": 2.7487
+            },
+            {
+                "ProductName": "Cut Glass Hexagon T-Light Holder",
+                "AvgPrice": 11.98,
+                "TotalQuantity": 504,
+                "Elasticity": 2.5058
+            },
+            {
+                "ProductName": "Wall Mirror Rectangle Diamante Pink",
+                "AvgPrice": 6.19,
+                "TotalQuantity": 96,
+                "Elasticity": 2.5038
+            },
+            {
+                "ProductName": "Metal Tube Chime On Bamboo",
+                "AvgPrice": 11.27,
+                "TotalQuantity": 392,
+                "Elasticity": 2.4653
+            }
+        ]
+    },
+    {
+        "question_id": 52,
+        "category": "Block 6: Elastic Goods Analysis",
+        "question_text": "Find top 5 products with elastic demand ($E_d > 1$) purchased by clients in Cluster 1 and suggest optimal pricing.",
+        "sql_query": "SELECT p.ProductName, AVG(p.Price) as AvgPrice, SUM(p.Quantity) as TotalQuantity, AVG(p.Elasticity) as Elasticity FROM purchases p JOIN clients c ON p.CustomerNo = c.CustomerNo WHERE c.Cluster = 1 AND p.Elasticity > 1 GROUP BY p.ProductName ORDER BY Elasticity DESC LIMIT 5;",
+        "ground_truth_output": [
+            {
+                "ProductName": "Paper Craft Little Birdie",
+                "AvgPrice": 12.38,
+                "TotalQuantity": 80995,
+                "Elasticity": 4.492
+            },
+            {
+                "ProductName": "Mini Ladle Love Heart Red",
+                "AvgPrice": 6.19,
+                "TotalQuantity": 288,
+                "Elasticity": 3.1065
+            },
+            {
+                "ProductName": "Balloon Art Make Your Own Flowers",
+                "AvgPrice": 6.04,
+                "TotalQuantity": 200,
+                "Elasticity": 2.9461
+            },
+            {
+                "ProductName": "Pink Bunny Easter Egg Basket",
+                "AvgPrice": 6.19,
+                "TotalQuantity": 144,
+                "Elasticity": 2.7263
+            },
+            {
+                "ProductName": "Paint Your Own Eggs In Crate",
+                "AvgPrice": 6.19,
+                "TotalQuantity": 144,
+                "Elasticity": 2.7263
+            }
+        ]
+    },
+    {
+        "question_id": 53,
+        "category": "Block 6: Elastic Goods Analysis",
+        "question_text": "Find top 5 products with elastic demand ($E_d > 1$) purchased by clients in Cluster 4 and suggest optimal pricing.",
+        "sql_query": "SELECT p.ProductName, AVG(p.Price) as AvgPrice, SUM(p.Quantity) as TotalQuantity, AVG(p.Elasticity) as Elasticity FROM purchases p JOIN clients c ON p.CustomerNo = c.CustomerNo WHERE c.Cluster = 4 AND p.Elasticity > 1 GROUP BY p.ProductName ORDER BY Elasticity DESC LIMIT 5;",
+        "ground_truth_output": []
+    },
+    {
+        "question_id": 54,
+        "category": "Block 6: Elastic Goods Analysis",
+        "question_text": "Find top 5 products with elastic demand ($E_d > 1$) purchased by clients in Cluster 6 and suggest optimal pricing.",
+        "sql_query": "SELECT p.ProductName, AVG(p.Price) as AvgPrice, SUM(p.Quantity) as TotalQuantity, AVG(p.Elasticity) as Elasticity FROM purchases p JOIN clients c ON p.CustomerNo = c.CustomerNo WHERE c.Cluster = 6 AND p.Elasticity > 1 GROUP BY p.ProductName ORDER BY Elasticity DESC LIMIT 5;",
+        "ground_truth_output": []
+    },
+    {
+        "question_id": 55,
+        "category": "Block 6: Elastic Goods Analysis",
+        "question_text": "Find top 5 products with elastic demand ($E_d > 1$) purchased by client 13408 and suggest strategic price adjustments.",
+        "sql_query": "SELECT ProductName, AVG(Price) as AvgPrice, SUM(Quantity) as TotalQuantity, AVG(Elasticity) as Elasticity FROM purchases WHERE CustomerNo = 13408 AND Elasticity > 1 GROUP BY ProductName ORDER BY Elasticity DESC LIMIT 5;",
+        "ground_truth_output": [
+            {
+                "ProductName": "Multi Colour Silver T-Light Holder",
+                "AvgPrice": 7.24,
+                "TotalQuantity": 192,
+                "Elasticity": 2.6558
+            },
+            {
+                "ProductName": "Jumbo Bag Scandinavian Blue Paisley",
+                "AvgPrice": 5.97,
+                "TotalQuantity": 100,
+                "Elasticity": 2.5774
+            },
+            {
+                "ProductName": "Jumbo Bag Alphabet",
+                "AvgPrice": 6.016666666666667,
+                "TotalQuantity": 300,
+                "Elasticity": 2.566266666666667
+            },
+            {
+                "ProductName": "Jumbo Bag Red Retrospot",
+                "AvgPrice": 6.04,
+                "TotalQuantity": 100,
+                "Elasticity": 2.5607
+            },
+            {
+                "ProductName": "Jumbo Bag Pears",
+                "AvgPrice": 6.04,
+                "TotalQuantity": 200,
+                "Elasticity": 2.5607
+            }
+        ]
+    },
+    {
+        "question_id": 56,
+        "category": "Block 6: Elastic Goods Analysis",
+        "question_text": "Find top 5 products with elastic demand ($E_d > 1$) purchased by client 13798 and suggest strategic price adjustments.",
+        "sql_query": "SELECT ProductName, AVG(Price) as AvgPrice, SUM(Quantity) as TotalQuantity, AVG(Elasticity) as Elasticity FROM purchases WHERE CustomerNo = 13798 AND Elasticity > 1 GROUP BY ProductName ORDER BY Elasticity DESC LIMIT 5;",
+        "ground_truth_output": [
+            {
+                "ProductName": "Kitchen Metal Sign",
+                "AvgPrice": 6.19,
+                "TotalQuantity": 250,
+                "Elasticity": 3.0289
+            },
+            {
+                "ProductName": "Lunch Bag Red Retrospot",
+                "AvgPrice": 5.87,
+                "TotalQuantity": 500,
+                "Elasticity": 2.602
+            },
+            {
+                "ProductName": "Lunch Bag Cars Blue",
+                "AvgPrice": 5.87,
+                "TotalQuantity": 300,
+                "Elasticity": 2.602
+            },
+            {
+                "ProductName": "Lunch Bag Black Skull",
+                "AvgPrice": 5.87,
+                "TotalQuantity": 300,
+                "Elasticity": 2.602
+            },
+            {
+                "ProductName": "Jumbo Bag Toys",
+                "AvgPrice": 5.993333333333333,
+                "TotalQuantity": 300,
+                "Elasticity": 2.5718333333333336
+            }
+        ]
+    },
+    {
+        "question_id": 57,
+        "category": "Block 6: Elastic Goods Analysis",
+        "question_text": "Find top 5 products with elastic demand ($E_d > 1$) purchased by client 12008 and suggest strategic price adjustments.",
+        "sql_query": "SELECT ProductName, AVG(Price) as AvgPrice, SUM(Quantity) as TotalQuantity, AVG(Elasticity) as Elasticity FROM purchases WHERE CustomerNo = 12008 AND Elasticity > 1 GROUP BY ProductName ORDER BY Elasticity DESC LIMIT 5;",
+        "ground_truth_output": [
+            {
+                "ProductName": "Fluted Antique Candle Holder",
+                "AvgPrice": 11.92,
+                "TotalQuantity": 48,
+                "Elasticity": 1.5621
+            },
+            {
+                "ProductName": "Antique Silver T-Light Glass",
+                "AvgPrice": 12.77,
+                "TotalQuantity": 40,
+                "Elasticity": 1.4483
+            }
+        ]
+    },
+    {
+        "question_id": 58,
+        "category": "Block 6: Elastic Goods Analysis",
+        "question_text": "Find top 5 products with elastic demand ($E_d > 1$) purchased by client 55698 and suggest strategic price adjustments.",
+        "sql_query": "SELECT ProductName, AVG(Price) as AvgPrice, SUM(Quantity) as TotalQuantity, AVG(Elasticity) as Elasticity FROM purchases WHERE CustomerNo = 55698 AND Elasticity > 1 GROUP BY ProductName ORDER BY Elasticity DESC LIMIT 5;",
+        "ground_truth_output": []
+    },
+    {
+        "question_id": 59,
+        "category": "Block 6: Elastic Goods Analysis",
+        "question_text": "Find top 5 products with elastic demand ($E_d > 1$) purchased by client 60730 and suggest strategic price adjustments.",
+        "sql_query": "SELECT ProductName, AVG(Price) as AvgPrice, SUM(Quantity) as TotalQuantity, AVG(Elasticity) as Elasticity FROM purchases WHERE CustomerNo = 60730 AND Elasticity > 1 GROUP BY ProductName ORDER BY Elasticity DESC LIMIT 5;",
+        "ground_truth_output": []
+    },
+    {
+        "question_id": 60,
+        "category": "Block 6: Elastic Goods Analysis",
+        "question_text": "Find top 5 products with elastic demand ($E_d > 1$) purchased by client 99999 and suggest strategic price adjustments.",
+        "sql_query": "SELECT ProductName, AVG(Price) as AvgPrice, SUM(Quantity) as TotalQuantity, AVG(Elasticity) as Elasticity FROM purchases WHERE CustomerNo = 99999 AND Elasticity > 1 GROUP BY ProductName ORDER BY Elasticity DESC LIMIT 5;",
+        "ground_truth_output": []
+    },
+    {
+        "question_id": 61,
+        "category": "Block 7: Country Elasticity",
+        "question_text": "Which products purchased by clients from Germany exhibit elastic demand, and what are their average prices?",
+        "sql_query": "SELECT ProductName, AVG(Price) as AvgPrice, AVG(Elasticity) as AvgElasticity FROM purchases WHERE Country LIKE '%Germany%' AND Elasticity > 1 GROUP BY ProductName ORDER BY AvgElasticity DESC LIMIT 10;",
+        "ground_truth_output": [
+            {
+                "ProductName": "Pack Of 12 Vintage Christmas Tissue",
+                "AvgPrice": 7.24,
+                "AvgElasticity": 2.4184
+            },
+            {
+                "ProductName": "Girls Alphabet Iron On Patches",
+                "AvgPrice": 10.47,
+                "AvgElasticity": 2.4113
+            },
+            {
+                "ProductName": "Colouring Pencils Brown Tube",
+                "AvgPrice": 11.34,
+                "AvgElasticity": 2.1819
+            },
+            {
+                "ProductName": "Balloon Art Make Your Own Flowers",
+                "AvgPrice": 6.19,
+                "AvgElasticity": 2.146
+            },
+            {
+                "ProductName": "Round Snack Boxes Set Of 4 Skulls",
+                "AvgPrice": 6.19,
+                "AvgElasticity": 2.1236
+            },
+            {
+                "ProductName": "Mini Jigsaw Dinosaur",
+                "AvgPrice": 6.19,
+                "AvgElasticity": 2.1236
+            },
+            {
+                "ProductName": "Red Retrospot Shopping Bag",
+                "AvgPrice": 6.43,
+                "AvgElasticity": 2.0802
+            },
+            {
+                "ProductName": "Popart Wooden Pencils Asst",
+                "AvgPrice": 10.29,
+                "AvgElasticity": 2.02505
+            },
+            {
+                "ProductName": "Pack Of 12 Red Apple Tissues",
+                "AvgPrice": 10.615,
+                "AvgElasticity": 1.9579999999999997
+            },
+            {
+                "ProductName": "Star Decoration Painted Zinc",
+                "AvgPrice": 10.44,
+                "AvgElasticity": 1.9459
+            }
+        ]
+    },
+    {
+        "question_id": 62,
+        "category": "Block 7: Country Elasticity",
+        "question_text": "Which products purchased by clients from France exhibit elastic demand, and what are their average prices?",
+        "sql_query": "SELECT ProductName, AVG(Price) as AvgPrice, AVG(Elasticity) as AvgElasticity FROM purchases WHERE Country LIKE '%France%' AND Elasticity > 1 GROUP BY ProductName ORDER BY AvgElasticity DESC LIMIT 10;",
+        "ground_truth_output": [
+            {
+                "ProductName": "Mini Wooden Happy Birthday Garland",
+                "AvgPrice": 11.74,
+                "AvgElasticity": 2.5806
+            },
+            {
+                "ProductName": "Felt Farm Animal White Bunny",
+                "AvgPrice": 10.44,
+                "AvgElasticity": 2.2414
+            },
+            {
+                "ProductName": "Cartoon Pencil Sharpeners",
+                "AvgPrice": 8.97,
+                "AvgElasticity": 2.2077666666666667
+            },
+            {
+                "ProductName": "Wrap Christmas Village",
+                "AvgPrice": 8.884,
+                "AvgElasticity": 2.02702
+            },
+            {
+                "ProductName": "Wooden Heart Christmas Scandinavian",
+                "AvgPrice": 8.370000000000001,
+                "AvgElasticity": 2.02595
+            },
+            {
+                "ProductName": "Gift Bag Birthday",
+                "AvgPrice": 5.46,
+                "AvgElasticity": 1.8723
+            },
+            {
+                "ProductName": "Disco Ball Christmas Decoration",
+                "AvgPrice": 10.37,
+                "AvgElasticity": 1.8285
+            },
+            {
+                "ProductName": "Christmas Metal Postcard With Bells",
+                "AvgPrice": 10.65,
+                "AvgElasticity": 1.8079
+            },
+            {
+                "ProductName": "Place Setting White Heart",
+                "AvgPrice": 10.68,
+                "AvgElasticity": 1.8057
+            },
+            {
+                "ProductName": "Pens Assorted Spaceball",
+                "AvgPrice": 10.44,
+                "AvgElasticity": 1.782333333333333
+            }
+        ]
+    },
+    {
+        "question_id": 63,
+        "category": "Block 7: Country Elasticity",
+        "question_text": "Which products purchased by clients from Australia exhibit elastic demand, and what are their average prices?",
+        "sql_query": "SELECT ProductName, AVG(Price) as AvgPrice, AVG(Elasticity) as AvgElasticity FROM purchases WHERE Country LIKE '%Australia%' AND Elasticity > 1 GROUP BY ProductName ORDER BY AvgElasticity DESC LIMIT 10;",
+        "ground_truth_output": [
+            {
+                "ProductName": "Jumbo Bag Vintage Christmas",
+                "AvgPrice": 6.04,
+                "AvgElasticity": 2.9461
+            },
+            {
+                "ProductName": "Lunch Bag Alphabet Design",
+                "AvgPrice": 5.87,
+                "AvgElasticity": 2.7977999999999996
+            },
+            {
+                "ProductName": "Vintage Christmas Gift Bag Large",
+                "AvgPrice": 5.66,
+                "AvgElasticity": 2.7619
+            },
+            {
+                "ProductName": "Key Fob Shed",
+                "AvgPrice": 10.79,
+                "AvgElasticity": 2.6722
+            },
+            {
+                "ProductName": "Key Fob Front Door",
+                "AvgPrice": 10.79,
+                "AvgElasticity": 2.6722
+            },
+            {
+                "ProductName": "Garage Key Fob",
+                "AvgPrice": 10.79,
+                "AvgElasticity": 2.6722
+            },
+            {
+                "ProductName": "Assorted Colours Silk Fan",
+                "AvgPrice": 10.99,
+                "AvgElasticity": 2.6687
+            },
+            {
+                "ProductName": "Pack Of 12 Woodland Tissues",
+                "AvgPrice": 10.51,
+                "AvgElasticity": 2.5798
+            },
+            {
+                "ProductName": "Pack Of 12 Pink Paisley Tissues",
+                "AvgPrice": 10.51,
+                "AvgElasticity": 2.5798
+            },
+            {
+                "ProductName": "Pack Of 12 Circus Parade Tissues",
+                "AvgPrice": 10.51,
+                "AvgElasticity": 2.5798
+            }
+        ]
+    },
+    {
+        "question_id": 64,
+        "category": "Block 7: Country Elasticity",
+        "question_text": "Which products purchased by clients from Norway exhibit elastic demand, and what are their average prices?",
+        "sql_query": "SELECT ProductName, AVG(Price) as AvgPrice, AVG(Elasticity) as AvgElasticity FROM purchases WHERE Country LIKE '%Norway%' AND Elasticity > 1 GROUP BY ProductName ORDER BY AvgElasticity DESC LIMIT 10;",
+        "ground_truth_output": [
+            {
+                "ProductName": "Jumbo Bag Red Retrospot",
+                "AvgPrice": 6.04,
+                "AvgElasticity": 2.5607
+            },
+            {
+                "ProductName": "Jumbo Bag Woodland Animals",
+                "AvgPrice": 6.19,
+                "AvgElasticity": 2.1236
+            },
+            {
+                "ProductName": "Small Folding Scissor(Pointed Edge)",
+                "AvgPrice": 9.587499999999999,
+                "AvgElasticity": 2.07475
+            },
+            {
+                "ProductName": "Grow A Flytrap Or Sunflower In Tin",
+                "AvgPrice": 10.1,
+                "AvgElasticity": 2.05715
+            },
+            {
+                "ProductName": "Feng Shui Pillar Candle",
+                "AvgPrice": 9.3775,
+                "AvgElasticity": 2.0364500000000003
+            },
+            {
+                "ProductName": "Set Of 60 Pantry Design Cake Cases",
+                "AvgPrice": 10.68,
+                "AvgElasticity": 2.0214
+            },
+            {
+                "ProductName": "Popcorn Holder",
+                "AvgPrice": 10.081999999999999,
+                "AvgElasticity": 1.98392
+            },
+            {
+                "ProductName": "Porcelain Budah Incense Holder",
+                "AvgPrice": 10.35,
+                "AvgElasticity": 1.9706
+            },
+            {
+                "ProductName": "Grow Your Own Plant In A Can",
+                "AvgPrice": 11.34,
+                "AvgElasticity": 1.8796
+            },
+            {
+                "ProductName": "Please One Person Metal Sign",
+                "AvgPrice": 9.17,
+                "AvgElasticity": 1.83685
+            }
+        ]
+    },
+    {
+        "question_id": 65,
+        "category": "Block 7: Country Elasticity",
+        "question_text": "Which products purchased by clients from Belgium exhibit elastic demand, and what are their average prices?",
+        "sql_query": "SELECT ProductName, AVG(Price) as AvgPrice, AVG(Elasticity) as AvgElasticity FROM purchases WHERE Country LIKE '%Belgium%' AND Elasticity > 1 GROUP BY ProductName ORDER BY AvgElasticity DESC LIMIT 10;",
+        "ground_truth_output": [
+            {
+                "ProductName": "Popart Wooden Pencils Asst",
+                "AvgPrice": 10.37,
+                "AvgElasticity": 1.9689
+            },
+            {
+                "ProductName": "Wrap Carousel",
+                "AvgPrice": 6.04,
+                "AvgElasticity": 1.7899
+            },
+            {
+                "ProductName": "Blossom Images Gift Wrap Set",
+                "AvgPrice": 10.92,
+                "AvgElasticity": 1.789
+            },
+            {
+                "ProductName": "Wrap Christmas Village",
+                "AvgPrice": 6.13,
+                "AvgElasticity": 1.7753
+            },
+            {
+                "ProductName": "Wrap Red Apples",
+                "AvgPrice": 6.19,
+                "AvgElasticity": 1.7658
+            },
+            {
+                "ProductName": "Wrap Pink Fairy Cakes",
+                "AvgPrice": 6.19,
+                "AvgElasticity": 1.7658
+            },
+            {
+                "ProductName": "Wrap Monster Fun",
+                "AvgPrice": 6.19,
+                "AvgElasticity": 1.7658
+            },
+            {
+                "ProductName": "Wrap Dolly Girl",
+                "AvgPrice": 6.19,
+                "AvgElasticity": 1.7658
+            },
+            {
+                "ProductName": "Wrap Cowboys",
+                "AvgPrice": 6.19,
+                "AvgElasticity": 1.7658
+            },
+            {
+                "ProductName": "Skulls And Crossbones Wrap",
+                "AvgPrice": 6.19,
+                "AvgElasticity": 1.7658
+            }
+        ]
+    },
+    {
+        "question_id": 66,
+        "category": "Block 7: Country Elasticity",
+        "question_text": "Which products purchased by clients from Moroco exhibit elastic demand, and what are their average prices?",
+        "sql_query": "SELECT ProductName, AVG(Price) as AvgPrice, AVG(Elasticity) as AvgElasticity FROM purchases WHERE Country LIKE '%Japan%' AND Elasticity > 1 GROUP BY ProductName ORDER BY AvgElasticity DESC LIMIT 10;",
+        "ground_truth_output": []
+    },
+    {
+        "question_id": 67,
+        "category": "Block 7: Country Elasticity",
+        "question_text": "Which products purchased by clients from China exhibit elastic demand, and what are their average prices?",
+        "sql_query": "SELECT ProductName, AVG(Price) as AvgPrice, AVG(Elasticity) as AvgElasticity FROM purchases WHERE Country LIKE '%China%' AND Elasticity > 1 GROUP BY ProductName ORDER BY AvgElasticity DESC LIMIT 10;",
+        "ground_truth_output": []
+    },
+    {
+        "question_id": 68,
+        "category": "Block 7: Country Elasticity",
+        "question_text": "Which products purchased by clients from Iran exhibit elastic demand, and what are their average prices?",
+        "sql_query": "SELECT ProductName, AVG(Price) as AvgPrice, AVG(Elasticity) as AvgElasticity FROM purchases WHERE Country LIKE '%Iran%' AND Elasticity > 1 GROUP BY ProductName ORDER BY AvgElasticity DESC LIMIT 10;",
+        "ground_truth_output": []
+    },
+    {
+        "question_id": 69,
+        "category": "Block 7: Country Elasticity",
+        "question_text": "Which products purchased by clients from Uganda exhibit elastic demand, and what are their average prices?",
+        "sql_query": "SELECT ProductName, AVG(Price) as AvgPrice, AVG(Elasticity) as AvgElasticity FROM purchases WHERE Country LIKE '%Israel%' AND Elasticity > 1 GROUP BY ProductName ORDER BY AvgElasticity DESC LIMIT 10;",
+        "ground_truth_output": []
+    },
+    {
+        "question_id": 70,
+        "category": "Block 7: Country Elasticity",
+        "question_text": "Which products purchased by clients from Ukraine exhibit elastic demand, and what are their average prices?",
+        "sql_query": "SELECT ProductName, AVG(Price) as AvgPrice, AVG(Elasticity) as AvgElasticity FROM purchases WHERE Country LIKE '%Ukraine%' AND Elasticity > 1 GROUP BY ProductName ORDER BY AvgElasticity DESC LIMIT 10;",
+        "ground_truth_output": []
+    },
+    {
+        "question_id": 71,
+        "category": "Block 8: Near-Unitary Elasticity",
+        "question_text": "List all items with near-unitary elasticity ($E_d \\approx 1$) bought by clients in Cluster 0 and specify purchase frequencies.",
+        "sql_query": "SELECT p.ProductName, COUNT(p.TransactionNo) as PurchaseFrequency, AVG(p.Elasticity) as Elasticity FROM purchases p JOIN clients c ON p.CustomerNo = c.CustomerNo WHERE c.Cluster = 0 AND ABS(p.Elasticity - 1.0) <= 0.1 GROUP BY p.ProductName ORDER BY PurchaseFrequency DESC LIMIT 10;",
+        "ground_truth_output": [
+            {
+                "ProductName": "Jam Making Set Printed",
+                "PurchaseFrequency": 296,
+                "Elasticity": 1.00729527027027
+            },
+            {
+                "ProductName": "Homemade Jam Scented Candles",
+                "PurchaseFrequency": 280,
+                "Elasticity": 1.0087146428571427
+            },
+            {
+                "ProductName": "Heart Of Wicker Small",
+                "PurchaseFrequency": 259,
+                "Elasticity": 0.997807722007722
+            },
+            {
+                "ProductName": "6 Ribbons Rustic Charm",
+                "PurchaseFrequency": 248,
+                "Elasticity": 0.9975979838709678
+            },
+            {
+                "ProductName": "Vintage Snap Cards",
+                "PurchaseFrequency": 247,
+                "Elasticity": 1.0293623481781378
+            },
+            {
+                "ProductName": "Victorian Glass Hanging T-Light",
+                "PurchaseFrequency": 225,
+                "Elasticity": 1.0057951111111112
+            },
+            {
+                "ProductName": "Antique Silver T-Light Glass",
+                "PurchaseFrequency": 224,
+                "Elasticity": 1.0151513392857143
+            },
+            {
+                "ProductName": "Red Harmonica In Box",
+                "PurchaseFrequency": 220,
+                "Elasticity": 1.0146009090909092
+            },
+            {
+                "ProductName": "Red Retrospot Charlotte Bag",
+                "PurchaseFrequency": 209,
+                "Elasticity": 0.9580961722488038
+            },
+            {
+                "ProductName": "Set Of 4 Pantry Jelly Moulds",
+                "PurchaseFrequency": 208,
+                "Elasticity": 1.014870673076923
+            }
+        ]
+    },
+    {
+        "question_id": 72,
+        "category": "Block 8: Near-Unitary Elasticity",
+        "question_text": "List all items with near-unitary elasticity ($E_d \\approx 1$) bought by clients in Cluster 1 and specify purchase frequencies.",
+        "sql_query": "SELECT p.ProductName, COUNT(p.TransactionNo) as PurchaseFrequency, AVG(p.Elasticity) as Elasticity FROM purchases p JOIN clients c ON p.CustomerNo = c.CustomerNo WHERE c.Cluster = 1 AND ABS(p.Elasticity - 1.0) <= 0.1 GROUP BY p.ProductName ORDER BY PurchaseFrequency DESC LIMIT 10;",
+        "ground_truth_output": [
+            {
+                "ProductName": "Regency Cakestand 3 Tier",
+                "PurchaseFrequency": 27,
+                "Elasticity": 0.9158111111111111
+            },
+            {
+                "ProductName": "Spaceboy Lunch Box",
+                "PurchaseFrequency": 22,
+                "Elasticity": 0.9918
+            },
+            {
+                "ProductName": "White Spot Red Ceramic Drawer Knob",
+                "PurchaseFrequency": 21,
+                "Elasticity": 1.0077095238095237
+            },
+            {
+                "ProductName": "Jam Making Set Printed",
+                "PurchaseFrequency": 20,
+                "Elasticity": 1.00927
+            },
+            {
+                "ProductName": "Vintage Snap Cards",
+                "PurchaseFrequency": 19,
+                "Elasticity": 1.0316
+            },
+            {
+                "ProductName": "Regency Tea Plate Roses",
+                "PurchaseFrequency": 19,
+                "Elasticity": 1.002
+            },
+            {
+                "ProductName": "Regency Tea Plate Green",
+                "PurchaseFrequency": 19,
+                "Elasticity": 1.0023631578947367
+            },
+            {
+                "ProductName": "Cook With Wine Metal Sign",
+                "PurchaseFrequency": 19,
+                "Elasticity": 0.9878105263157895
+            },
+            {
+                "ProductName": "White Spot Blue Ceramic Drawer Knob",
+                "PurchaseFrequency": 18,
+                "Elasticity": 1.0104166666666667
+            },
+            {
+                "ProductName": "Clothes Pegs Retrospot Pack 24",
+                "PurchaseFrequency": 18,
+                "Elasticity": 1.0038333333333334
+            }
+        ]
+    },
+    {
+        "question_id": 73,
+        "category": "Block 8: Near-Unitary Elasticity",
+        "question_text": "List all items with near-unitary elasticity ($E_d \\approx 1$) bought by clients in Cluster 4 and specify purchase frequencies.",
+        "sql_query": "SELECT p.ProductName, COUNT(p.TransactionNo) as PurchaseFrequency, AVG(p.Elasticity) as Elasticity FROM purchases p JOIN clients c ON p.CustomerNo = c.CustomerNo WHERE c.Cluster = 4 AND ABS(p.Elasticity - 1.0) <= 0.1 GROUP BY p.ProductName ORDER BY PurchaseFrequency DESC LIMIT 10;",
+        "ground_truth_output": []
+    },
+    {
+        "question_id": 74,
+        "category": "Block 8: Near-Unitary Elasticity",
+        "question_text": "List all items with near-unitary elasticity ($E_d \\approx 1$) bought by clients in Cluster 6 and specify purchase frequencies.",
+        "sql_query": "SELECT p.ProductName, COUNT(p.TransactionNo) as PurchaseFrequency, AVG(p.Elasticity) as Elasticity FROM purchases p JOIN clients c ON p.CustomerNo = c.CustomerNo WHERE c.Cluster = 6 AND ABS(p.Elasticity - 1.0) <= 0.1 GROUP BY p.ProductName ORDER BY PurchaseFrequency DESC LIMIT 10;",
+        "ground_truth_output": []
+    },
+    {
+        "question_id": 75,
+        "category": "Block 8: Near-Unitary Elasticity",
+        "question_text": "List all items with near-unitary elasticity ($0.95 \\le E_d \\le 1.05$) bought by clients from the United Kingdom.",
+        "sql_query": "SELECT ProductName, COUNT(TransactionNo) as PurchaseFrequency, AVG(Elasticity) as Elasticity FROM purchases WHERE Country = 'United Kingdom' AND Elasticity BETWEEN 0.95 AND 1.05 GROUP BY ProductName ORDER BY PurchaseFrequency DESC LIMIT 10;",
+        "ground_truth_output": [
+            {
+                "ProductName": "Homemade Jam Scented Candles",
+                "PurchaseFrequency": 386,
+                "Elasticity": 1.0087655440414507
+            },
+            {
+                "ProductName": "Jam Making Set Printed",
+                "PurchaseFrequency": 374,
+                "Elasticity": 1.0088700534759358
+            },
+            {
+                "ProductName": "Victorian Glass Hanging T-Light",
+                "PurchaseFrequency": 333,
+                "Elasticity": 1.0116324324324324
+            },
+            {
+                "ProductName": "Set Of 4 Pantry Jelly Moulds",
+                "PurchaseFrequency": 329,
+                "Elasticity": 1.0159993920972645
+            },
+            {
+                "ProductName": "Heart Of Wicker Small",
+                "PurchaseFrequency": 313,
+                "Elasticity": 1.0017159744408946
+            },
+            {
+                "ProductName": "Antique Silver T-Light Glass",
+                "PurchaseFrequency": 309,
+                "Elasticity": 1.0148216828478964
+            },
+            {
+                "ProductName": "Red Retrospot Charlotte Bag",
+                "PurchaseFrequency": 304,
+                "Elasticity": 0.9583046052631579
+            },
+            {
+                "ProductName": "Vintage Snap Cards",
+                "PurchaseFrequency": 302,
+                "Elasticity": 1.0296195364238412
+            },
+            {
+                "ProductName": "6 Ribbons Rustic Charm",
+                "PurchaseFrequency": 271,
+                "Elasticity": 0.998550553505535
+            },
+            {
+                "ProductName": "Card Billboard Font",
+                "PurchaseFrequency": 266,
+                "Elasticity": 1.0490007518796993
+            }
+        ]
+    },
+    {
+        "question_id": 76,
+        "category": "Block 8: Near-Unitary Elasticity",
+        "question_text": "Identify items purchased by customer 13069 that exhibit near-unitary elasticity ($E_d \\approx 1$) and analyze profit impact.",
+        "sql_query": "SELECT ProductName, Price, Quantity, Elasticity FROM purchases WHERE CustomerNo = 13069 AND ABS(Elasticity - 1.0) <= 0.1 GROUP BY ProductName LIMIT 10;",
+        "ground_truth_output": [
+            {
+                "ProductName": "Asstd Multicolour Circles Mug",
+                "Price": 10.65,
+                "Quantity": 12,
+                "Elasticity": 1.0505
+            },
+            {
+                "ProductName": "Blue Polkadot Beaker",
+                "Price": 10.65,
+                "Quantity": 12,
+                "Elasticity": 1.0505
+            },
+            {
+                "ProductName": "Blue Polkadot Bowl",
+                "Price": 11.53,
+                "Quantity": 10,
+                "Elasticity": 0.9418
+            },
+            {
+                "ProductName": "Blue Polkadot Coffee Mug",
+                "Price": 10.65,
+                "Quantity": 12,
+                "Elasticity": 1.0505
+            },
+            {
+                "ProductName": "Blue Polkadot Plate",
+                "Price": 11.98,
+                "Quantity": 12,
+                "Elasticity": 1.0007
+            },
+            {
+                "ProductName": "Box Of 24 Cocktail Parasols",
+                "Price": 10.68,
+                "Quantity": 9,
+                "Elasticity": 0.9277
+            },
+            {
+                "ProductName": "Cake Plate Lovebird White",
+                "Price": 12.25,
+                "Quantity": 12,
+                "Elasticity": 0.9918
+            },
+            {
+                "ProductName": "Charlotte Bag Pink Polkadot",
+                "Price": 11.12,
+                "Quantity": 10,
+                "Elasticity": 0.9559
+            },
+            {
+                "ProductName": "Charlotte Bag Suki Design",
+                "Price": 11.12,
+                "Quantity": 10,
+                "Elasticity": 0.9559
+            },
+            {
+                "ProductName": "Christmas Gingham Star",
+                "Price": 11.12,
+                "Quantity": 10,
+                "Elasticity": 0.9559
+            }
+        ]
+    },
+    {
+        "question_id": 77,
+        "category": "Block 8: Near-Unitary Elasticity",
+        "question_text": "Identify items purchased by customer 17490 that exhibit near-unitary elasticity ($E_d \\approx 1$) and analyze profit impact.",
+        "sql_query": "SELECT ProductName, Price, Quantity, Elasticity FROM purchases WHERE CustomerNo = 17490 AND ABS(Elasticity - 1.0) <= 0.1 GROUP BY ProductName LIMIT 10;",
+        "ground_truth_output": [
+            {
+                "ProductName": "6 Ribbons Empire",
+                "Price": 11.94,
+                "Quantity": 12,
+                "Elasticity": 1.002
+            },
+            {
+                "ProductName": "6 Ribbons Rustic Charm",
+                "Price": 12.25,
+                "Quantity": 12,
+                "Elasticity": 0.9918
+            },
+            {
+                "ProductName": "Airline Bag Vintage Tokyo 78",
+                "Price": 14.3,
+                "Quantity": 12,
+                "Elasticity": 0.9341
+            },
+            {
+                "ProductName": "Chocolate Calculator",
+                "Price": 11.94,
+                "Quantity": 12,
+                "Elasticity": 1.002
+            },
+            {
+                "ProductName": "Clothes Pegs Retrospot Pack 24",
+                "Price": 11.94,
+                "Quantity": 12,
+                "Elasticity": 1.002
+            },
+            {
+                "ProductName": "Decorative Vintage Coffee Box",
+                "Price": 14.5,
+                "Quantity": 12,
+                "Elasticity": 0.9292
+            },
+            {
+                "ProductName": "Fridge Magnets Us Diner Assorted",
+                "Price": 11.12,
+                "Quantity": 12,
+                "Elasticity": 1.0316
+            },
+            {
+                "ProductName": "Gardeners Kneeling Pad Cup Of Tea",
+                "Price": 11.94,
+                "Quantity": 12,
+                "Elasticity": 1.002
+            },
+            {
+                "ProductName": "Hanging Jam Jar T-Light Holders",
+                "Price": 11.12,
+                "Quantity": 12,
+                "Elasticity": 1.0316
+            },
+            {
+                "ProductName": "Jam Clock Magnet",
+                "Price": 11.53,
+                "Quantity": 12,
+                "Elasticity": 1.0163
+            }
+        ]
+    },
+    {
+        "question_id": 78,
+        "category": "Block 8: Near-Unitary Elasticity",
+        "question_text": "Identify items purchased by customer 90909 that exhibit near-unitary elasticity ($E_d \\approx 1$) and analyze profit impact.",
+        "sql_query": "SELECT ProductName, Price, Quantity, Elasticity FROM purchases WHERE CustomerNo = 90909 AND ABS(Elasticity - 1.0) <= 0.1 GROUP BY ProductName LIMIT 10;",
+        "ground_truth_output": []
+    },
+    {
+        "question_id": 79,
+        "category": "Block 8: Near-Unitary Elasticity",
+        "question_text": "Identify items purchased by customer 80808 that exhibit near-unitary elasticity ($E_d \\approx 1$) and analyze profit impact.",
+        "sql_query": "SELECT ProductName, Price, Quantity, Elasticity FROM purchases WHERE CustomerNo = 80808 AND ABS(Elasticity - 1.0) <= 0.1 GROUP BY ProductName LIMIT 10;",
+        "ground_truth_output": []
+    },
+    {
+        "question_id": 80,
+        "category": "Block 8: Near-Unitary Elasticity",
+        "question_text": "Identify items purchased by customer 75694 that exhibit near-unitary elasticity ($E_d \\approx 1$) and analyze profit impact.",
+        "sql_query": "SELECT ProductName, Price, Quantity, Elasticity FROM purchases WHERE CustomerNo = 75694 AND ABS(Elasticity - 1.0) <= 0.1 GROUP BY ProductName LIMIT 10;",
+        "ground_truth_output": []
+    },
+    {
+        "question_id": 81,
+        "category": "Part 2: Unique Questions",
+        "question_text": "Find the top 5 products with the highest overall price elasticity of demand ($E_d > 1$) in the database and provide optimal pricing recommendations.",
+        "sql_query": "SELECT ProductName, AVG(Price) as Price, SUM(Quantity) as Quantity, AVG(Elasticity) as Elasticity FROM purchases WHERE Elasticity > 1 GROUP BY ProductName ORDER BY Elasticity DESC LIMIT 5;",
+        "ground_truth_output": [
+            {
+                "ProductName": "Paper Craft Little Birdie",
+                "Price": 12.38,
+                "Quantity": 80995,
+                "Elasticity": 4.492
+            },
+            {
+                "ProductName": "Sweetheart Bird House",
+                "Price": 6.19,
+                "Quantity": 620,
+                "Elasticity": 3.5271
+            },
+            {
+                "ProductName": "Tea Time Tea Towels",
+                "Price": 12.629999999999999,
+                "Quantity": 2600,
+                "Elasticity": 2.8276000000000003
+            },
+            {
+                "ProductName": "Rose Scent Candle Jewelled Drawer",
+                "Price": 10.76,
+                "Quantity": 408,
+                "Elasticity": 2.5302
+            },
+            {
+                "ProductName": "Rain Poncho",
+                "Price": 10.92,
+                "Quantity": 407,
+                "Elasticity": 2.5135
+            }
+        ]
+    },
+    {
+        "question_id": 82,
+        "category": "Part 2: Unique Questions",
+        "question_text": "List all items with near-unitary elasticity rounded to one decimal place ($1.01 <= E_d <= 1.04$) and specify which cluster's clients bought them most frequently.",
+        "sql_query": "SELECT p.ProductName, c.Cluster, COUNT(*) as PurchaseFrequency, ROUND(AVG(p.Elasticity), 1) as RoundedElasticity FROM purchases p JOIN clients c ON p.CustomerNo = c.CustomerNo WHERE p.Elasticity BETWEEN 1.01 AND 1.04 GROUP BY p.ProductName, c.Cluster ORDER BY PurchaseFrequency DESC LIMIT 10;",
+        "ground_truth_output": [
+            {
+                "ProductName": "Vintage Snap Cards",
+                "Cluster": 0,
+                "PurchaseFrequency": 233,
+                "RoundedElasticity": 1.0
+            },
+            {
+                "ProductName": "Red Harmonica In Box",
+                "Cluster": 0,
+                "PurchaseFrequency": 214,
+                "RoundedElasticity": 1.0
+            },
+            {
+                "ProductName": "Set Of 4 Pantry Jelly Moulds",
+                "Cluster": 0,
+                "PurchaseFrequency": 203,
+                "RoundedElasticity": 1.0
+            },
+            {
+                "ProductName": "Antique Silver T-Light Glass",
+                "Cluster": 0,
+                "PurchaseFrequency": 200,
+                "RoundedElasticity": 1.0
+            },
+            {
+                "ProductName": "Pink Cream Felt Craft Trinket Box",
+                "Cluster": 0,
+                "PurchaseFrequency": 186,
+                "RoundedElasticity": 1.0
+            },
+            {
+                "ProductName": "Blue Harmonica In Box",
+                "Cluster": 0,
+                "PurchaseFrequency": 162,
+                "RoundedElasticity": 1.0
+            },
+            {
+                "ProductName": "Victorian Glass Hanging T-Light",
+                "Cluster": 0,
+                "PurchaseFrequency": 160,
+                "RoundedElasticity": 1.0
+            },
+            {
+                "ProductName": "Hanging Heart Jar T-Light Holder",
+                "Cluster": 0,
+                "PurchaseFrequency": 159,
+                "RoundedElasticity": 1.0
+            },
+            {
+                "ProductName": "Strawberry Ceramic Trinket Pot",
+                "Cluster": 0,
+                "PurchaseFrequency": 158,
+                "RoundedElasticity": 1.0
+            },
+            {
+                "ProductName": "Wooden Box Of Dominoes",
+                "Cluster": 0,
+                "PurchaseFrequency": 156,
+                "RoundedElasticity": 1.0
+            }
+        ]
+    },
+    {
+        "question_id": 83,
+        "category": "Part 2: Unique Questions",
+        "question_text": "Compare the average transaction monetary value between representative clients from Cluster 0 and Cluster 2.",
+        "sql_query": "SELECT Cluster, AVG(Monetary/Frequency) as AvgTransactionMonetaryValue FROM clients WHERE Cluster IN (0, 2) GROUP BY Cluster;",
+        "ground_truth_output": [
+            {
+                "Cluster": 0,
+                "AvgTransactionMonetaryValue": 2830.034287171528
+            },
+            {
+                "Cluster": 2,
+                "AvgTransactionMonetaryValue": 3435.787503507513
+            }
+        ]
+    },
+    {
+        "question_id": 84,
+        "category": "Part 2: Unique Questions",
+        "question_text": "Compare the average transaction monetary value between representative clients from Cluster 1 and Cluster 3.",
+        "sql_query": "SELECT Cluster, AVG(Monetary/Frequency) as AvgTransactionMonetaryValue FROM clients WHERE Cluster IN (1, 3) GROUP BY Cluster;",
+        "ground_truth_output": [
+            {
+                "Cluster": 1,
+                "AvgTransactionMonetaryValue": 86648.10738847083
+            },
+            {
+                "Cluster": 3,
+                "AvgTransactionMonetaryValue": 2570.7262757051867
+            }
+        ]
+    },
+    {
+        "question_id": 85,
+        "category": "Part 2: Unique Questions",
+        "question_text": "Evaluate the overall elasticity distribution across all identified clusters and summarize key risks for price increase strategies.",
+        "sql_query": "SELECT c.Cluster, CASE WHEN p.Elasticity > 1 THEN 'Elastic' WHEN p.Elasticity < 1 THEN 'Inelastic' ELSE 'Unitary' END as DemandType, COUNT(*) as ItemCount FROM purchases p JOIN clients c ON p.CustomerNo = c.CustomerNo GROUP BY c.Cluster, DemandType;",
+        "ground_truth_output": [
+            {
+                "Cluster": 0,
+                "DemandType": "Elastic",
+                "ItemCount": 77342
+            },
+            {
+                "Cluster": 0,
+                "DemandType": "Inelastic",
+                "ItemCount": 254384
+            },
+            {
+                "Cluster": 1,
+                "DemandType": "Elastic",
+                "ItemCount": 12596
+            },
+            {
+                "Cluster": 1,
+                "DemandType": "Inelastic",
+                "ItemCount": 19611
+            },
+            {
+                "Cluster": 2,
+                "DemandType": "Elastic",
+                "ItemCount": 33374
+            },
+            {
+                "Cluster": 2,
+                "DemandType": "Inelastic",
+                "ItemCount": 75286
+            },
+            {
+                "Cluster": 3,
+                "DemandType": "Elastic",
+                "ItemCount": 8856
+            },
+            {
+                "Cluster": 3,
+                "DemandType": "Inelastic",
+                "ItemCount": 54779
+            }
+        ]
+    },
+    {
+        "question_id": 86,
+        "category": "Part 2: Unique Questions",
+        "question_text": "Compare total monetary expenditure, purchase frequency, and elasticity profiles between Cluster 0 and Cluster 1.",
+        "sql_query": "SELECT c.Cluster, SUM(c.Monetary) as TotalMonetary, AVG(c.Frequency) as AvgFrequency, AVG(p.Elasticity) as AvgElasticity FROM clients c JOIN purchases p ON c.CustomerNo = p.CustomerNo WHERE c.Cluster IN (0, 1) GROUP BY c.Cluster;",
+        "ground_truth_output": [
+            {
+                "Cluster": 0,
+                "TotalMonetary": 5296910737.03,
+                "AvgFrequency": 4.981852492719895,
+                "AvgElasticity": 0.5517029997648663
+            },
+            {
+                "Cluster": 1,
+                "TotalMonetary": 19620395857.3,
+                "AvgFrequency": 123.72664327630639,
+                "AvgElasticity": 0.8095348526717794
+            }
+        ]
+    },
+    {
+        "question_id": 87,
+        "category": "Part 2: Unique Questions",
+        "question_text": "Compare monetary spend and product elasticity ranges between representative clients in Cluster 0 and Cluster 2.",
+        "sql_query": "SELECT c.Cluster, AVG(c.Monetary) as AvgSpend, MIN(p.Elasticity) as MinElasticity, MAX(p.Elasticity) as MaxElasticity FROM clients c JOIN purchases p ON c.CustomerNo = p.CustomerNo WHERE c.Cluster IN (0, 2) GROUP BY c.Cluster;",
+        "ground_truth_output": [
+            {
+                "Cluster": 0,
+                "AvgSpend": 15967.728598391443,
+                "MinElasticity": 0.0,
+                "MaxElasticity": 5.1766
+            },
+            {
+                "Cluster": 2,
+                "AvgSpend": 65606.41177038469,
+                "MinElasticity": 0.0,
+                "MaxElasticity": 4.0665
+            }
+        ]
+    },
+    {
+        "question_id": 88,
+        "category": "Part 2: Unique Questions",
+        "question_text": "Compare average price per item and recency indicators between clients belonging to Cluster 1 and Cluster 3.",
+        "sql_query": "SELECT Cluster, AVG(AvgPrice) as MeanPrice, AVG(Recency) as MeanRecency FROM clients WHERE Cluster IN (1, 3) GROUP BY Cluster;",
+        "ground_truth_output": [
+            {
+                "Cluster": 1,
+                "MeanPrice": 12.05618636386111,
+                "MeanRecency": 25.61111111111111
+            },
+            {
+                "Cluster": 3,
+                "MeanPrice": 15.32371154464164,
+                "MeanRecency": 246.7921974522293
+            }
+        ]
+    },
+    {
+        "question_id": 89,
+        "category": "Part 2: Unique Questions",
+        "question_text": "Compare Christmas product purchasing propensity (BoughtChristmas) between Cluster 0 and Cluster 3.",
+        "sql_query": "SELECT Cluster, AVG(BoughtChristmas) * 100 as ChristmasPurchasePercentage FROM clients WHERE Cluster IN (0, 3) GROUP BY Cluster;",
+        "ground_truth_output": [
+            {
+                "Cluster": 0,
+                "ChristmasPurchasePercentage": 72.661644695543
+            },
+            {
+                "Cluster": 3,
+                "ChristmasPurchasePercentage": 28.105095541401276
+            }
+        ]
+    },
+    {
+        "question_id": 90,
+        "category": "Part 2: Unique Questions",
+        "question_text": "Compare set product purchasing propensity (BoughtSet) between clients in Cluster 2 and Cluster 3.",
+        "sql_query": "SELECT Cluster, AVG(BoughtSet) * 100 as SetPurchasePercentage FROM clients WHERE Cluster IN (2, 3) GROUP BY Cluster;",
+        "ground_truth_output": [
+            {
+                "Cluster": 2,
+                "SetPurchasePercentage": 98.83720930232558
+            },
+            {
+                "Cluster": 3,
+                "SetPurchasePercentage": 75.23885350318471
+            }
+        ]
+    },
+    {
+        "question_id": 91,
+        "category": "Part 2: Unique Questions",
+        "question_text": "Identify top 5 products with price elasticity $E_d > 1.2$ in the database and assess the sensitivity of demand to price changes.",
+        "sql_query": "SELECT ProductName, AVG(Price) as Price, SUM(Quantity) as Quantity, AVG(Elasticity) as Elasticity FROM purchases WHERE Elasticity > 1.2 GROUP BY ProductName ORDER BY Elasticity DESC LIMIT 5;",
+        "ground_truth_output": [
+            {
+                "ProductName": "Paper Craft Little Birdie",
+                "Price": 12.38,
+                "Quantity": 80995,
+                "Elasticity": 4.492
+            },
+            {
+                "ProductName": "Sweetheart Bird House",
+                "Price": 6.19,
+                "Quantity": 620,
+                "Elasticity": 3.5271
+            },
+            {
+                "ProductName": "Tea Time Tea Towels",
+                "Price": 12.629999999999999,
+                "Quantity": 2600,
+                "Elasticity": 2.8276000000000003
+            },
+            {
+                "ProductName": "Pink Bunny Easter Egg Basket",
+                "Price": 6.19,
+                "Quantity": 144,
+                "Elasticity": 2.7263
+            },
+            {
+                "ProductName": "Blue Bunny Easter Egg Basket",
+                "Price": 6.19,
+                "Quantity": 144,
+                "Elasticity": 2.7263
+            }
+        ]
+    },
+    {
+        "question_id": 92,
+        "category": "Part 2: Unique Questions",
+        "question_text": "List inelastic products ($E_d < 1$) in Cluster 2 and propose margin improvement measures without impacting purchased quantities (Quantity).",
+        "sql_query": "SELECT p.ProductName, AVG(p.Price) as Price, SUM(p.Quantity) as TotalQuantity, AVG(p.Elasticity) as Elasticity FROM purchases p JOIN clients c ON p.CustomerNo = c.CustomerNo WHERE c.Cluster = 2 AND p.Elasticity < 1 GROUP BY p.ProductName ORDER BY TotalQuantity DESC LIMIT 10;",
+        "ground_truth_output": [
+            {
+                "ProductName": "Regency Cakestand 3 Tier",
+                "Price": 22.334470338983053,
+                "TotalQuantity": 1909,
+                "Elasticity": 0.34676101694915257
+            },
+            {
+                "ProductName": "Party Bunting",
+                "Price": 15.212983870967744,
+                "TotalQuantity": 1694,
+                "Elasticity": 0.5028924731182796
+            },
+            {
+                "ProductName": "Jumbo Storage Bag Suki",
+                "Price": 12.284598540145986,
+                "TotalQuantity": 1632,
+                "Elasticity": 0.6175270072992701
+            },
+            {
+                "ProductName": "Cream Hanging Heart T-Light Holder",
+                "Price": 13.023406326034063,
+                "TotalQuantity": 1611,
+                "Elasticity": 0.5471800486618005
+            },
+            {
+                "ProductName": "Jumbo Shopper Vintage Red Paisley",
+                "Price": 12.290988142292491,
+                "TotalQuantity": 1504,
+                "Elasticity": 0.6259083003952569
+            },
+            {
+                "ProductName": "Alarm Clock Bakelike Green",
+                "Price": 14.052284644194756,
+                "TotalQuantity": 1433,
+                "Elasticity": 0.5710082397003746
+            },
+            {
+                "ProductName": "Red Retrospot Charlotte Bag",
+                "Price": 11.005176991150442,
+                "TotalQuantity": 1394,
+                "Elasticity": 0.6811823008849558
+            },
+            {
+                "ProductName": "Alarm Clock Bakelike Red",
+                "Price": 13.856816608996539,
+                "TotalQuantity": 1388,
+                "Elasticity": 0.5342096885813149
+            },
+            {
+                "ProductName": "Spaceboy Lunch Box",
+                "Price": 12.10645933014354,
+                "TotalQuantity": 1333,
+                "Elasticity": 0.5819770334928229
+            },
+            {
+                "ProductName": "Spotty Bunting",
+                "Price": 15.167872340425532,
+                "TotalQuantity": 1315,
+                "Elasticity": 0.5110063829787235
+            }
+        ]
+    },
+    {
+        "question_id": 93,
+        "category": "Part 2: Unique Questions",
+        "question_text": "Provide a comparative evaluation of high-value vs. churn-risk clusters based on all three RFM metrics (Recency, Frequency, Monetary spend).",
+        "sql_query": "SELECT Cluster, AVG(Recency) as AvgRecency, AVG(Frequency) as AvgFrequency, AVG(Monetary) as AvgMonetary FROM clients GROUP BY Cluster;",
+        "ground_truth_output": [
+            {
+                "Cluster": 0,
+                "AvgRecency": 45.12680477087257,
+                "AvgFrequency": 3.590709353421218,
+                "AvgMonetary": 9267.062335216573
+            },
+            {
+                "Cluster": 1,
+                "AvgRecency": 25.61111111111111,
+                "AvgFrequency": 69.0,
+                "AvgMonetary": 710774.5333333333
+            },
+            {
+                "Cluster": 2,
+                "AvgRecency": 13.2015503875969,
+                "AvgFrequency": 19.984496124031008,
+                "AvgMonetary": 61351.7196124031
+            },
+            {
+                "Cluster": 3,
+                "AvgRecency": 246.7921974522293,
+                "AvgFrequency": 1.553343949044586,
+                "AvgMonetary": 3836.2631210191084
+            }
+        ]
+    },
+    {
+        "question_id": 94,
+        "category": "Part 2: Unique Questions",
+        "question_text": "Evaluate the elasticity distribution across Cluster 0 (specifying product counts for elastic, inelastic, and unitary types) and summarize key operational risks for margin expansion.",
+        "sql_query": "SELECT CASE WHEN p.Elasticity > 1 THEN 'Elastic' WHEN p.Elasticity < 1 THEN 'Inelastic' ELSE 'Unitary' END as Category, COUNT(DISTINCT p.ProductName) as ProductCount FROM purchases p JOIN clients c ON p.CustomerNo = c.CustomerNo WHERE c.Cluster = 0 GROUP BY Category;",
+        "ground_truth_output": [
+            {
+                "Category": "Elastic",
+                "ProductCount": 2474
+            },
+            {
+                "Category": "Inelastic",
+                "ProductCount": 3605
+            }
+        ]
+    },
+    {
+        "question_id": 95,
+        "category": "Part 2: Unique Questions",
+        "question_text": "Evaluate the elasticity distribution across Cluster 2 (specifying product counts for elastic, inelastic, and unitary types) and summarize key operational risks for price increase strategies.",
+        "sql_query": "SELECT CASE WHEN p.Elasticity > 1 THEN 'Elastic' WHEN p.Elasticity < 1 THEN 'Inelastic' ELSE 'Unitary' END as Category, COUNT(DISTINCT p.ProductName) as ProductCount FROM purchases p JOIN clients c ON p.CustomerNo = c.CustomerNo WHERE c.Cluster = 2 GROUP BY Category;",
+        "ground_truth_output": [
+            {
+                "Category": "Elastic",
+                "ProductCount": 2166
+            },
+            {
+                "Category": "Inelastic",
+                "ProductCount": 3174
+            }
+        ]
+    },
+    {
+        "question_id": 96,
+        "category": "Part 2: Unique Questions",
+        "question_text": "Evaluate the elasticity distribution across Cluster 3 (specifying product counts for elastic, inelastic, and unitary types) and summarize customer churn risks associated with price modifications.",
+        "sql_query": "SELECT CASE WHEN p.Elasticity > 1 THEN 'Elastic' WHEN p.Elasticity < 1 THEN 'Inelastic' ELSE 'Unitary' END as Category, COUNT(DISTINCT p.ProductName) as ProductCount FROM purchases p JOIN clients c ON p.CustomerNo = c.CustomerNo WHERE c.Cluster = 3 GROUP BY Category;",
+        "ground_truth_output": [
+            {
+                "Category": "Elastic",
+                "ProductCount": 1459
+            },
+            {
+                "Category": "Inelastic",
+                "ProductCount": 3063
+            }
+        ]
+    },
+    {
+        "question_id": 97,
+        "category": "Part 2: Unique Questions",
+        "question_text": "Synthesize multi-agent recommendations regarding dynamic discounting and cross-selling strategies for high-frequency purchasing segments, differentiating between low-cost and high-cost products.",
+        "sql_query": "SELECT CASE WHEN Price >= 15 THEN 'High-Cost' ELSE 'Low-Cost' END as PriceCategory, AVG(Elasticity) as AvgElasticity, SUM(Quantity) as TotalQty FROM purchases GROUP BY PriceCategory;",
+        "ground_truth_output": [
+            {
+                "PriceCategory": "High-Cost",
+                "AvgElasticity": 0.24236158947762174,
+                "TotalQty": 327969
+            },
+            {
+                "PriceCategory": "Low-Cost",
+                "AvgElasticity": 0.6489276289376334,
+                "TotalQty": 4994170
+            }
+        ]
+    },
+    {
+        "question_id": 98,
+        "category": "Part 2: Unique Questions",
+        "question_text": "Which product categories in the database generate the highest total revenue despite having elastic demand ($E_d > 1$)?",
+        "sql_query": "SELECT ProductName, SUM(Price * Quantity) as TotalRevenue, AVG(Elasticity) as Elasticity FROM purchases WHERE Elasticity > 1 GROUP BY ProductName ORDER BY TotalRevenue DESC LIMIT 5;",
+        "ground_truth_output": [
+            {
+                "ProductName": "Paper Craft Little Birdie",
+                "TotalRevenue": 1002718.1000000001,
+                "Elasticity": 4.492
+            },
+            {
+                "ProductName": "Medium Ceramic Top Storage Jar",
+                "TotalRevenue": 877764.37,
+                "Elasticity": 1.2677569105691058
+            },
+            {
+                "ProductName": "World War 2 Gliders Asstd Designs",
+                "TotalRevenue": 567639.05,
+                "Elasticity": 1.7929699579831933
+            },
+            {
+                "ProductName": "Popcorn Holder",
+                "TotalRevenue": 556532.4,
+                "Elasticity": 1.454464312736444
+            },
+            {
+                "ProductName": "Pack Of 72 Retrospot Cake Cases",
+                "TotalRevenue": 373867.89999999997,
+                "Elasticity": 1.43344682230869
+            }
+        ]
+    },
+    {
+        "question_id": 99,
+        "category": "Part 2: Unique Questions",
+        "question_text": "Analyze the proportion of expenditure spent on set products (BoughtSet = 1) relative to total customer monetary spend across different segments.",
+        "sql_query": "SELECT BoughtSet, SUM(Monetary) as GroupMonetary, AVG(Monetary) as AvgSpend FROM clients GROUP BY BoughtSet;",
+        "ground_truth_output": [
+            {
+                "BoughtSet": 0,
+                "GroupMonetary": 4283041.72,
+                "AvgSpend": 6171.529855907781
+            },
+            {
+                "BoughtSet": 1,
+                "GroupMonetary": 58682850.62,
+                "AvgSpend": 14583.21337475149
+            }
+        ]
+    },
+    {
+        "question_id": 100,
+        "category": "Part 2: Unique Questions",
+        "question_text": "Summarize key decision-making criteria for Critic and Manager agents when resolving elasticity-margin trade-offs specifically within Cluster 2 (High-Value Loyal Clients).",
+        "sql_query": "SELECT c.Cluster, COUNT(DISTINCT c.CustomerNo) as TotalClients, AVG(c.Monetary) as AvgSpend, AVG(p.Elasticity) as AvgElasticity FROM clients c JOIN purchases p ON c.CustomerNo = p.CustomerNo WHERE c.Cluster = 2 GROUP BY c.Cluster;",
+        "ground_truth_output": [
+            {
+                "Cluster": 2,
+                "TotalClients": 258,
+                "AvgSpend": 65606.41177038469,
+                "AvgElasticity": 0.6783526210196944
+            }
+        ]
+    }
+]

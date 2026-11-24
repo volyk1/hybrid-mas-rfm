@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAS Terminal v3.5</title>
+    <link href="[https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Fira+Code:wght@400;500&display=swap](https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Fira+Code:wght@400;500&display=swap)" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="sidebar">
+        <button class="btn-new" id="btn-new-chat">+ Новий чат</button>
+        <div class="history-label" id="lbl-history">АРХІВ ОБГОВОРЕНЬ</div>
+        <div class="sessions-list" id="sessions-container"></div>
+        <div class="version">MAS Terminal v3.5</div>
+    </div>
+
+    <div class="main-container">
+        <div class="header">
+            <div class="header-title">
+                <span class="status-dot"></span>
+                <span id="lbl-header-title">МУЛЬТИАГЕНТНА АНАЛІТИЧНА СИСТЕМА</span>
+            </div>
+            
+            <div class="lang-switch">
+                <button class="lang-btn active" id="btn-ua" onclick="switchLanguage('ua')">UA</button>
+                <button class="lang-btn" id="btn-en" onclick="switchLanguage('en')">EN</button>
+            </div>
+        </div>
+
+        <div class="chat-area" id="chat-box">
+            <div class="welcome-banner" id="welcome-msg">
+                <!-- Заповнюється JS-ом -->
+            </div>
+        </div>
+
+        <div class="input-area">
+            <div class="input-wrapper">
+                <input type="text" id="user-input" placeholder="Введіть аналітичний запит..." autocomplete="off">
+                <button class="btn-send" id="btn-submit">➔</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ВСПЛИВАЮЧЕ КОНТЕКСТНЕ МЕНЮ ДЛЯ ЧАТУ (В СТИЛІ GEMINI) -->
+    <div id="session-context-menu" class="context-menu hidden">
+        <button class="menu-item" id="menu-btn-rename">
+            <svg viewBox="0 0 24 24"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>
+            <span id="lbl-menu-rename">Перейменувати</span>
+        </button>
+        <button class="menu-item danger" id="menu-btn-delete">
+            <svg viewBox="0 0 24 24"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/></svg>
+            <span id="lbl-menu-delete">Видалити</span>
+        </button>
+    </div>
+
+    <!-- МОДАЛЬНЕ ВІКНО ПЕРЕЙМЕНУВАННЯ (З БЛОКУВАННЯМ СКРОЛУ) -->
+    <div id="rename-modal-overlay" class="modal-overlay hidden">
+        <div class="modal-card">
+            <h3 id="modal-title">Перейменуйте цей чат</h3>
+            <input type="text" id="modal-rename-input" class="modal-input" autocomplete="off" />
+            <div class="modal-actions">
+                <button id="modal-btn-cancel" class="btn-modal cancel">Скасувати</button>
+                <button id="modal-btn-confirm" class="btn-modal confirm">Перейменувати</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

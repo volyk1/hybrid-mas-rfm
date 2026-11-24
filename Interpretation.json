@@ -1,0 +1,118 @@
+[
+    {
+        "knowledge_base_title": "Система підтримки прийняття рішень: Сегментація та Стратегії KSU24",
+        "segmentation_results": {
+            "overall_accuracy": 0.998,
+            "silhouette_score": 0.597,
+            "clusters": [
+                {
+                    "cluster_id": 0,
+                    "name": "Growth / Перспективні (Новачки)",
+                    "strategy": "GROWTH: Cross-sell (супутні товари), стимулювання другої покупки через тригерні розсилки",
+                    "statistics": {
+                        "customer_count": 3186,
+                        "avg_check": 9267.06,
+                        "recency_days": 45,
+                        "frequency_score": 3.5
+                    },
+                    "model_confidence": 1.0,
+                    "shap_insight": "Recency (0.07) у межах норми, але Frequency (-0.16) та Monetary (-0.20) нижче середнього. Потенціал до зростання високий.",
+                    "behavioral_profile": "Нещодавні перші покупки, відсутність стійкої звички споживання."
+                },
+                {
+                    "cluster_id": 1,
+                    "name": "VIP / Найцінніші",
+                    "strategy": "VIP: Персональні знижки, консьєрж-сервіс, індивідуальний менеджмент",
+                    "statistics": {
+                        "customer_count": 18,
+                        "avg_check": 710774.53,
+                        "frequency": 69.0
+                    },
+                    "model_confidence": 0.94,
+                    "shap_insight": "Екстремально високі Frequency (11.26) та Monetary (6.56). Recency (-0.94) вказує на надвисоку активність.",
+                    "behavioral_profile": "Ядро бізнесу. Найвища цінність, купують постійно. Висока залежність бізнесу від цього сегменту."
+                },
+                {
+                    "cluster_id": 2,
+                    "name": "Loyal / Активні лоялісти",
+                    "strategy": "GROWTH: Cross-sell (набори), програми утримання (Retention)",
+                    "statistics": {
+                        "customer_count": 258,
+                        "avg_check": 61351.72,
+                        "recency_days": 13
+                    },
+                    "model_confidence": 1.0,
+                    "shap_insight": "Помірні позитивні значення Frequency (1.40) та Monetary (0.89). FavMonth (-1.30) вказує на сезонність.",
+                    "behavioral_profile": "Надійний середній сегмент. Купують набори майже завжди (0.99). Найвища активність на Різдво."
+                },
+                {
+                    "cluster_id": 3,
+                    "name": "Churn / Відтік (Ситуативні)",
+                    "strategy": "CHURN: Реактивація, NPS-опитування, м'який ремаркетинг товарів-комплементів",
+                    "statistics": {
+                        "customer_count": 1256,
+                        "avg_check": 3836.26,
+                        "recency_days": 246,
+                        "avg_unit_price": 15.32
+                    },
+                    "model_confidence": "High (Zero errors in class 3)",
+                    "shap_insight": "Критичний Recency (2.63) — найвищий у вибірці. Низька частота та загальна цінність.",
+                    "behavioral_profile": "Разові покупки за високою ціною. Ймовірно, ситуативна потреба або ціновий бар'єр."
+                }
+            ]
+        },
+        "explainable_ai_analysis": {
+            "feature_importance_shap": {
+                "priority_1": "Frequency (Частота) — домінуючий фактор впливу на прибуток.",
+                "priority_2": "AvgPrice (Середня ціна) — позитивна кореляція з Monetary Value.",
+                "priority_3": "Recency (Давність) — зворотна залежність: менше днів = вища цінність.",
+                "priority_4": "FavMonth (Сезонність) — значна дисперсія впливу залежно від пори року.",
+                "priority_5": "Binary_Features (Christmas/Set) — допоміжні фактори для точного коригування."
+            },
+            "silhouette_analysis_details": {
+                "cluster_0_blue": "Стабільна структура, домінуюча роль у вибірці, відсутність помилкової класифікації.",
+                "cluster_3_pink": "Висока якість, математично відокремлений сегмент, хоча має внутрішню варіативність.",
+                "cluster_1_red": "Зона нестабільності. Включає аномалії та клієнтів з нестандартною поведінкою.",
+                "cluster_2_orange": "Нішевий сегмент (наприклад, оптовики). Висока впевненість моделі попри малу чисельність."
+            }
+        },
+        "neural_network_architecture": {
+            "structure": "4-рівнева повнозв'язна модель (Dense)",
+            "layers": [
+                {
+                    "name": "Input_Layer",
+                    "dimension": 7,
+                    "description": "Вектор із 7 RFM-ознак."
+                },
+                {
+                    "name": "Hidden_Layer_1",
+                    "neurons": 32,
+                    "activation": "Dense",
+                    "description": "Розширення простору ознак для виявлення складних зв'язків."
+                },
+                {
+                    "name": "Dropout_Layer",
+                    "rate": "dropout_5",
+                    "description": "Регуляризація для запобігання перенавчанню."
+                },
+                {
+                    "name": "Hidden_Layer_2",
+                    "neurons": 16,
+                    "description": "Стиснення та виділення ключових абстракцій."
+                },
+                {
+                    "name": "Output_Layer",
+                    "neurons": 4,
+                    "description": "Класифікація на 4 кластери (Softmax)."
+                }
+            ],
+            "complexity": "Lightweight (Швидке навчання, висока роздільна здатність)."
+        },
+        "strategic_recommendations": {
+            "vip_loyal": "Пріоритет на утримання (Retention). Ексклюзивний сервіс для мінімізації ризику втрати одиничних великих чеків.",
+            "growth_potential": "Стимулювання звички через автоматизовані сценарії ремаркетингу (LTV growth).",
+            "churn_management": "Обмеження бюджету на агресивну рекламу. Використання NPS для аналізу бар'єрів повернення.",
+            "scientific_conclusion": "Ключовим драйвером виручки є Frequency. Це обґрунтовує доцільність автоматизації програм лояльності для стимулювання повторних покупок."
+        }
+    }
+]
